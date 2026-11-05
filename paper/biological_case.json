@@ -1,0 +1,1231 @@
+{
+  "scope": "Exploratory fixed-model case; no new fitting or endpoint search. Patient bootstrap omits full training/development uncertainty. Marker gates are proxies, not definitive cell-type or tumor labels.",
+  "assay_patients": 40,
+  "generator_runs": 4,
+  "direct_runs": 3,
+  "radius_um": 20,
+  "quantile": 0.85,
+  "marker_pair": [
+    "CD8a",
+    "Pan-CK"
+  ],
+  "assay": [
+    {
+      "feature": "conditional",
+      "method": "measured",
+      "runs": 1,
+      "mse_relative_to_stain": 0.0,
+      "spearman": 1.0
+    },
+    {
+      "feature": "conditional",
+      "method": "stain",
+      "runs": 1,
+      "mse_relative_to_stain": 1.0,
+      "spearman": 0.4443923530119696
+    },
+    {
+      "feature": "conditional",
+      "method": "stain_q",
+      "runs": 1,
+      "mse_relative_to_stain": 0.9867193546694266,
+      "spearman": 0.4779926282483106
+    },
+    {
+      "feature": "conditional",
+      "method": "ligature",
+      "runs": 4,
+      "mse_relative_to_stain": 0.5833502341202993,
+      "spearman": 0.6206378986866793
+    },
+    {
+      "feature": "conditional",
+      "method": "ligature_q",
+      "runs": 4,
+      "mse_relative_to_stain": 0.5402024556920866,
+      "spearman": 0.5931519699812384
+    },
+    {
+      "feature": "conditional",
+      "method": "direct",
+      "runs": 3,
+      "mse_relative_to_stain": 0.7298866044979474,
+      "spearman": 0.4879924953095685
+    },
+    {
+      "feature": "abundance",
+      "method": "measured",
+      "runs": 1,
+      "mse_relative_to_stain": 0.0,
+      "spearman": 1.0
+    },
+    {
+      "feature": "abundance",
+      "method": "stain",
+      "runs": 1,
+      "mse_relative_to_stain": 1.0,
+      "spearman": 0.751969981238274
+    },
+    {
+      "feature": "abundance",
+      "method": "stain_q",
+      "runs": 1,
+      "mse_relative_to_stain": 0.4910850852601447,
+      "spearman": 0.6347091932457787
+    },
+    {
+      "feature": "abundance",
+      "method": "ligature",
+      "runs": 4,
+      "mse_relative_to_stain": 1.065200244275476,
+      "spearman": 0.7409943714821765
+    },
+    {
+      "feature": "abundance",
+      "method": "ligature_q",
+      "runs": 4,
+      "mse_relative_to_stain": 0.33403366779690863,
+      "spearman": 0.6664165103189496
+    },
+    {
+      "feature": "abundance",
+      "method": "direct",
+      "runs": 3,
+      "mse_relative_to_stain": 0.40849116440664274,
+      "spearman": 0.6718574108818012
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "measured",
+      "runs": 1,
+      "mse_relative_to_stain": 0.0,
+      "spearman": 1.0
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "stain",
+      "runs": 1,
+      "mse_relative_to_stain": 1.0,
+      "spearman": 0.3264195572915798
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "stain_q",
+      "runs": 1,
+      "mse_relative_to_stain": 1.0243540868575138,
+      "spearman": 0.40030236635671196
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "ligature",
+      "runs": 4,
+      "mse_relative_to_stain": 1.0404515456964307,
+      "spearman": 0.5056285178236398
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "ligature_q",
+      "runs": 4,
+      "mse_relative_to_stain": 0.7763129990318133,
+      "spearman": 0.5511726078799251
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "direct",
+      "runs": 3,
+      "mse_relative_to_stain": 0.852994666190121,
+      "spearman": 0.4245153220762978
+    }
+  ],
+  "contact_comparisons": [
+    {
+      "method": "ligature",
+      "baseline": "stain_q",
+      "mse_ratio": 0.591201775215745,
+      "ci95": [
+        0.3433684744622577,
+        1.1100726788104025
+      ]
+    },
+    {
+      "method": "ligature",
+      "baseline": "direct",
+      "mse_ratio": 0.799234059818863,
+      "ci95": [
+        0.5353830113701318,
+        1.0699766274153142
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "baseline": "stain_q",
+      "mse_ratio": 0.5474732538038303,
+      "ci95": [
+        0.3982403626905799,
+        0.8787403711396876
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "baseline": "direct",
+      "mse_ratio": 0.7401183312079893,
+      "ci95": [
+        0.5589211424415015,
+        0.9161523692915512
+      ]
+    }
+  ],
+  "clinical_patients": 39,
+  "events": 24,
+  "clinical": [
+    {
+      "feature": "conditional",
+      "method": "measured",
+      "comparison": "pooled",
+      "concordance": 0.5479704797047971,
+      "ci95": [
+        0.44300675396563116,
+        0.6571742093784076
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "method": "measured",
+      "comparison": "within_fold",
+      "concordance": 0.5918367346938775,
+      "ci95": [
+        0.4324240907574241,
+        0.7613920454545453
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "conditional",
+      "method": "measured",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.53125,
+      "ci95": [
+        0.2413793103448276,
+        0.8235933503836314
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "conditional",
+      "method": "stain",
+      "comparison": "pooled",
+      "concordance": 0.48523985239852396,
+      "ci95": [
+        0.36597938144329895,
+        0.6052278015921616
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "method": "stain",
+      "comparison": "within_fold",
+      "concordance": 0.5102040816326531,
+      "ci95": [
+        0.3505025773195876,
+        0.6829328664573775
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "conditional",
+      "method": "stain",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.53125,
+      "ci95": [
+        0.25925925925925924,
+        0.8261244377811092
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "conditional",
+      "method": "stain_q",
+      "comparison": "pooled",
+      "concordance": 0.49169741697416974,
+      "ci95": [
+        0.3752707615258019,
+        0.6197850970020314
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "method": "stain_q",
+      "comparison": "within_fold",
+      "concordance": 0.5,
+      "ci95": [
+        0.32954545454545453,
+        0.6764795552367289
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "conditional",
+      "method": "stain_q",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.484375,
+      "ci95": [
+        0.22213541666666667,
+        0.7666666666666667
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "conditional",
+      "method": "ligature",
+      "comparison": "pooled",
+      "concordance": 0.5142988929889298,
+      "ci95": [
+        0.3735491980651731,
+        0.6548637396425318
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "method": "ligature",
+      "comparison": "within_fold",
+      "concordance": 0.528061224489796,
+      "ci95": [
+        0.3589185393258428,
+        0.6910436473638718
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "conditional",
+      "method": "ligature",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.546875,
+      "ci95": [
+        0.28828125,
+        0.8181818181818181
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "conditional",
+      "method": "ligature_q",
+      "comparison": "pooled",
+      "concordance": 0.5249077490774908,
+      "ci95": [
+        0.39751802738542147,
+        0.6597425354496169
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "method": "ligature_q",
+      "comparison": "within_fold",
+      "concordance": 0.5510204081632653,
+      "ci95": [
+        0.3906131628787879,
+        0.7198795180722892
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "conditional",
+      "method": "ligature_q",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.5390625,
+      "ci95": [
+        0.27937091503267975,
+        0.8181818181818182
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "conditional",
+      "method": "direct",
+      "comparison": "pooled",
+      "concordance": 0.5209102091020911,
+      "ci95": [
+        0.3958154854620976,
+        0.6455208956015129
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "method": "direct",
+      "comparison": "within_fold",
+      "concordance": 0.5170068027210885,
+      "ci95": [
+        0.34565772669220945,
+        0.6872625830959163
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "conditional",
+      "method": "direct",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.53125,
+      "ci95": [
+        0.2692204301075269,
+        0.7902116402116397
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "abundance",
+      "method": "measured",
+      "comparison": "pooled",
+      "concordance": 0.5996309963099631,
+      "ci95": [
+        0.47565020565810595,
+        0.7267221908526256
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "method": "measured",
+      "comparison": "within_fold",
+      "concordance": 0.6326530612244898,
+      "ci95": [
+        0.45649758454106276,
+        0.8
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "abundance",
+      "method": "measured",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.46875,
+      "ci95": [
+        0.2,
+        0.764754901960784
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "abundance",
+      "method": "stain",
+      "comparison": "pooled",
+      "concordance": 0.5461254612546126,
+      "ci95": [
+        0.4044512630226916,
+        0.6885222304768978
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "method": "stain",
+      "comparison": "within_fold",
+      "concordance": 0.5510204081632653,
+      "ci95": [
+        0.3613770298585647,
+        0.7368553960659223
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "abundance",
+      "method": "stain",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.5,
+      "ci95": [
+        0.17857142857142858,
+        0.7894736842105263
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "abundance",
+      "method": "stain_q",
+      "comparison": "pooled",
+      "concordance": 0.5479704797047971,
+      "ci95": [
+        0.4109177859177859,
+        0.690578502534729
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "method": "stain_q",
+      "comparison": "within_fold",
+      "concordance": 0.5408163265306123,
+      "ci95": [
+        0.3499849397590361,
+        0.7435975609756097
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "abundance",
+      "method": "stain_q",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.53125,
+      "ci95": [
+        0.2222222222222222,
+        0.8
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "abundance",
+      "method": "ligature",
+      "comparison": "pooled",
+      "concordance": 0.558579335793358,
+      "ci95": [
+        0.41996642394405365,
+        0.7092588495105655
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "method": "ligature",
+      "comparison": "within_fold",
+      "concordance": 0.5637755102040816,
+      "ci95": [
+        0.3781655844155844,
+        0.7527189009661837
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "abundance",
+      "method": "ligature",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.546875,
+      "ci95": [
+        0.2799711538461539,
+        0.7875240384615384
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "abundance",
+      "method": "ligature_q",
+      "comparison": "pooled",
+      "concordance": 0.540590405904059,
+      "ci95": [
+        0.4088134664279784,
+        0.6887374624396679
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "method": "ligature_q",
+      "comparison": "within_fold",
+      "concordance": 0.5331632653061225,
+      "ci95": [
+        0.3467741935483871,
+        0.722897234097681
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "abundance",
+      "method": "ligature_q",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.515625,
+      "ci95": [
+        0.22727272727272727,
+        0.7833928571428569
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "abundance",
+      "method": "direct",
+      "comparison": "pooled",
+      "concordance": 0.5811808118081182,
+      "ci95": [
+        0.4434106871395514,
+        0.7112081568864691
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "method": "direct",
+      "comparison": "within_fold",
+      "concordance": 0.5986394557823129,
+      "ci95": [
+        0.4070481601731602,
+        0.785320823244552
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "abundance",
+      "method": "direct",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.625,
+      "ci95": [
+        0.31427170868347337,
+        0.8788089225589224
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "measured",
+      "comparison": "pooled",
+      "concordance": 0.5719557195571956,
+      "ci95": [
+        0.45255039972193256,
+        0.6835609593604263
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "measured",
+      "comparison": "within_fold",
+      "concordance": 0.6122448979591837,
+      "ci95": [
+        0.4415084915084915,
+        0.7777777777777778
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "measured",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.5,
+      "ci95": [
+        0.23518099547511312,
+        0.7586206896551724
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "stain",
+      "comparison": "pooled",
+      "concordance": 0.5,
+      "ci95": [
+        0.3619401849823537,
+        0.6560572808378161
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "stain",
+      "comparison": "within_fold",
+      "concordance": 0.5204081632653061,
+      "ci95": [
+        0.34693197278911564,
+        0.7083749999999998
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "stain",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.5625,
+      "ci95": [
+        0.2799444444444445,
+        0.8571428571428571
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "stain_q",
+      "comparison": "pooled",
+      "concordance": 0.5138376383763837,
+      "ci95": [
+        0.3796806961537923,
+        0.6508365034604509
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "stain_q",
+      "comparison": "within_fold",
+      "concordance": 0.5306122448979592,
+      "ci95": [
+        0.35793425324675326,
+        0.7098796296296297
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "stain_q",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.515625,
+      "ci95": [
+        0.25,
+        0.7931034482758621
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "ligature",
+      "comparison": "pooled",
+      "concordance": 0.5262915129151292,
+      "ci95": [
+        0.38683883465834756,
+        0.6655001373489161
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "ligature",
+      "comparison": "within_fold",
+      "concordance": 0.5459183673469388,
+      "ci95": [
+        0.37496408045977014,
+        0.7233749999999998
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "ligature",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.5078125,
+      "ci95": [
+        0.23483664772727275,
+        0.7813308189655168
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "ligature_q",
+      "comparison": "pooled",
+      "concordance": 0.5355166051660516,
+      "ci95": [
+        0.40428054822984094,
+        0.6708655341724586
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "ligature_q",
+      "comparison": "within_fold",
+      "concordance": 0.5510204081632653,
+      "ci95": [
+        0.375,
+        0.7250135869565216
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "ligature_q",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.5234375,
+      "ci95": [
+        0.275,
+        0.7727272727272727
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "direct",
+      "comparison": "pooled",
+      "concordance": 0.5455104551045511,
+      "ci95": [
+        0.4032343743056482,
+        0.6854578336188842
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "direct",
+      "comparison": "within_fold",
+      "concordance": 0.564625850340136,
+      "ci95": [
+        0.3802443448570209,
+        0.7500251004016063
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "engaged_burden",
+      "method": "direct",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.5625,
+      "ci95": [
+        0.2952289377289377,
+        0.8222549019607842
+      ],
+      "comparable_pairs": 32
+    }
+  ],
+  "controls": [
+    {
+      "method": "published_IFM1",
+      "comparison": "pooled",
+      "concordance": 0.7407749077490775,
+      "ci95": [
+        0.6473648187255783,
+        0.8387365591397848
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "method": "published_IFM1",
+      "comparison": "within_fold",
+      "concordance": 0.7142857142857143,
+      "ci95": [
+        0.5764705882352941,
+        0.8478475400457665
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "method": "published_IFM1",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.625,
+      "ci95": [
+        0.375,
+        0.8636800699300697
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "method": "clinical_stage",
+      "comparison": "pooled",
+      "concordance": 0.6559040590405905,
+      "ci95": [
+        0.5541540672913118,
+        0.7522195652173911
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "method": "clinical_stage",
+      "comparison": "within_fold",
+      "concordance": 0.6632653061224489,
+      "ci95": [
+        0.5364397321428572,
+        0.7944551282051281
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "method": "clinical_stage",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.5,
+      "ci95": [
+        0.5,
+        0.5
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "method": "constant_risk",
+      "comparison": "pooled",
+      "concordance": 0.5,
+      "ci95": [
+        0.5,
+        0.5
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "method": "constant_risk",
+      "comparison": "within_fold",
+      "concordance": 0.5,
+      "ci95": [
+        0.5,
+        0.5
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "method": "constant_risk",
+      "comparison": "within_fold_and_stage",
+      "concordance": 0.5,
+      "ci95": [
+        0.5,
+        0.5
+      ],
+      "comparable_pairs": 32
+    }
+  ],
+  "clinical_comparisons": [
+    {
+      "feature": "conditional",
+      "comparison": "pooled",
+      "contrast": "ligature_q minus stain_q",
+      "difference": 0.03321033210332108,
+      "ci95": [
+        -0.04095633077826884,
+        0.10938185307017541
+      ]
+    },
+    {
+      "feature": "conditional",
+      "comparison": "pooled",
+      "contrast": "ligature_q minus direct",
+      "difference": 0.003997539975399755,
+      "ci95": [
+        -0.05932765982737174,
+        0.06548358657578335
+      ]
+    },
+    {
+      "feature": "abundance",
+      "comparison": "pooled",
+      "contrast": "ligature_q minus stain_q",
+      "difference": -0.0073800738007380184,
+      "ci95": [
+        -0.04500523337754931,
+        0.02852813744521591
+      ]
+    },
+    {
+      "feature": "abundance",
+      "comparison": "pooled",
+      "contrast": "ligature_q minus direct",
+      "difference": -0.04059040590405916,
+      "ci95": [
+        -0.09968291293415048,
+        0.02444618155966847
+      ]
+    },
+    {
+      "feature": "engaged_burden",
+      "comparison": "pooled",
+      "contrast": "ligature_q minus stain_q",
+      "difference": 0.021678966789667853,
+      "ci95": [
+        -0.03785087142178008,
+        0.08256364281628067
+      ]
+    },
+    {
+      "feature": "engaged_burden",
+      "comparison": "pooled",
+      "contrast": "ligature_q minus direct",
+      "difference": -0.0099938499384995,
+      "ci95": [
+        -0.06610653029479004,
+        0.05355096724508453
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "pooled",
+      "contrast": "measured burden minus abundance",
+      "difference": -0.027675276752767486,
+      "ci95": [
+        -0.13503440327039995,
+        0.07212576113824083
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "pooled",
+      "contrast": "stain burden minus abundance",
+      "difference": -0.04612546125461259,
+      "ci95": [
+        -0.167744289447782,
+        0.07520885547201331
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "pooled",
+      "contrast": "stain_q burden minus abundance",
+      "difference": -0.03413284132841332,
+      "ci95": [
+        -0.14054515745692217,
+        0.07546569932402813
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "pooled",
+      "contrast": "ligature burden minus abundance",
+      "difference": -0.032287822878228734,
+      "ci95": [
+        -0.180416775720948,
+        0.11293283360856678
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "pooled",
+      "contrast": "ligature_q burden minus abundance",
+      "difference": -0.00507380073800745,
+      "ci95": [
+        -0.11363928487964478,
+        0.11054880410326173
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "pooled",
+      "contrast": "direct burden minus abundance",
+      "difference": -0.03567035670356711,
+      "ci95": [
+        -0.1298961938421527,
+        0.0715108986906367
+      ]
+    },
+    {
+      "feature": "conditional",
+      "comparison": "within_fold",
+      "contrast": "ligature_q minus stain_q",
+      "difference": 0.05102040816326525,
+      "ci95": [
+        -0.07733972293814438,
+        0.18153648577449938
+      ]
+    },
+    {
+      "feature": "conditional",
+      "comparison": "within_fold",
+      "contrast": "ligature_q minus direct",
+      "difference": 0.0340136054421768,
+      "ci95": [
+        -0.09543287566742949,
+        0.16089180038693515
+      ]
+    },
+    {
+      "feature": "abundance",
+      "comparison": "within_fold",
+      "contrast": "ligature_q minus stain_q",
+      "difference": -0.007653061224489832,
+      "ci95": [
+        -0.09375,
+        0.07071304258804251
+      ]
+    },
+    {
+      "feature": "abundance",
+      "comparison": "within_fold",
+      "contrast": "ligature_q minus direct",
+      "difference": -0.06547619047619047,
+      "ci95": [
+        -0.16666666666666663,
+        0.019054520358868135
+      ]
+    },
+    {
+      "feature": "engaged_burden",
+      "comparison": "within_fold",
+      "contrast": "ligature_q minus stain_q",
+      "difference": 0.020408163265306034,
+      "ci95": [
+        -0.08125363372093028,
+        0.12337955718979812
+      ]
+    },
+    {
+      "feature": "engaged_burden",
+      "comparison": "within_fold",
+      "contrast": "ligature_q minus direct",
+      "difference": -0.013605442176870763,
+      "ci95": [
+        -0.1131293029259897,
+        0.08982040229885058
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold",
+      "contrast": "measured burden minus abundance",
+      "difference": -0.020408163265306145,
+      "ci95": [
+        -0.1744331395348837,
+        0.13338541666666645
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold",
+      "contrast": "stain burden minus abundance",
+      "difference": -0.030612244897959107,
+      "ci95": [
+        -0.2333510638297873,
+        0.17391304347826086
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold",
+      "contrast": "stain_q burden minus abundance",
+      "difference": -0.010204081632653073,
+      "ci95": [
+        -0.19375919117647056,
+        0.16671195652173895
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold",
+      "contrast": "ligature burden minus abundance",
+      "difference": -0.017857142857142794,
+      "ci95": [
+        -0.2022505350454789,
+        0.16074862637362627
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold",
+      "contrast": "ligature_q burden minus abundance",
+      "difference": 0.017857142857142794,
+      "ci95": [
+        -0.15519095291064144,
+        0.1962673478725023
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold",
+      "contrast": "direct burden minus abundance",
+      "difference": -0.03401360544217691,
+      "ci95": [
+        -0.18652210884353737,
+        0.11526234567901213
+      ]
+    },
+    {
+      "feature": "conditional",
+      "comparison": "within_fold_and_stage",
+      "contrast": "ligature_q minus stain_q",
+      "difference": 0.0546875,
+      "ci95": [
+        -0.15000000000000002,
+        0.27086397058823514
+      ]
+    },
+    {
+      "feature": "conditional",
+      "comparison": "within_fold_and_stage",
+      "contrast": "ligature_q minus direct",
+      "difference": 0.0078125,
+      "ci95": [
+        -0.22502016129032257,
+        0.2501096491228065
+      ]
+    },
+    {
+      "feature": "abundance",
+      "comparison": "within_fold_and_stage",
+      "contrast": "ligature_q minus stain_q",
+      "difference": -0.015625,
+      "ci95": [
+        -0.15000000000000002,
+        0.0535714285714286
+      ]
+    },
+    {
+      "feature": "abundance",
+      "comparison": "within_fold_and_stage",
+      "contrast": "ligature_q minus direct",
+      "difference": -0.109375,
+      "ci95": [
+        -0.26475490196078433,
+        0.0
+      ]
+    },
+    {
+      "feature": "engaged_burden",
+      "comparison": "within_fold_and_stage",
+      "contrast": "ligature_q minus stain_q",
+      "difference": 0.0078125,
+      "ci95": [
+        -0.13097718253968257,
+        0.16666666666666669
+      ]
+    },
+    {
+      "feature": "engaged_burden",
+      "comparison": "within_fold_and_stage",
+      "contrast": "ligature_q minus direct",
+      "difference": -0.0390625,
+      "ci95": [
+        -0.18753472222222234,
+        0.09421525032938073
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold_and_stage",
+      "contrast": "measured burden minus abundance",
+      "difference": 0.03125,
+      "ci95": [
+        -0.2,
+        0.26319659442724436
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold_and_stage",
+      "contrast": "stain burden minus abundance",
+      "difference": 0.0625,
+      "ci95": [
+        -0.3448275862068965,
+        0.4831896551724114
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold_and_stage",
+      "contrast": "stain_q burden minus abundance",
+      "difference": -0.015625,
+      "ci95": [
+        -0.3333333333333333,
+        0.29999999999999993
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold_and_stage",
+      "contrast": "ligature burden minus abundance",
+      "difference": -0.0390625,
+      "ci95": [
+        -0.3600277777777777,
+        0.2934942455242964
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold_and_stage",
+      "contrast": "ligature_q burden minus abundance",
+      "difference": 0.0078125,
+      "ci95": [
+        -0.29179687500000007,
+        0.3000892857142852
+      ]
+    },
+    {
+      "feature": "burden_vs_abundance",
+      "comparison": "within_fold_and_stage",
+      "contrast": "direct burden minus abundance",
+      "difference": -0.0625,
+      "ci95": [
+        -0.2948809523809525,
+        0.18337962962962945
+      ]
+    }
+  ],
+  "clinical_source_sha256": "dcf244f0d5a779ac33f11de7b6f93bc544e655a51a8057bb6decda9019d673d3"
+}

@@ -44,6 +44,7 @@
 \input{verified_numbers}
 \input{control_numbers}
 \input{baseline_numbers}
+\input{biological_numbers}
 
 \begin{document}
 \hypersetup{pageanchor=false}
@@ -261,9 +262,9 @@ Attenuation is only partly removed (median bias $-23\%$; one validation-fitted c
 
 \subsection{Statistics never scored in training}
 \label{sec:unscored}
-Because \method{} produces joint samples, nonlinear statistics are computed on samples exactly as on measured data. The most widely used are gated contact statistics, such as the fraction of CD8+ T cells adjacent to tumor cells; we use marker gates as a proxy for such phenotypes. We marked a cell positive for a marker when its value exceeds the training-patient 85th percentile and computed, for all 256 ordered marker pairs, the fraction of $a$-positive cells with a $b$-positive cell within 20\,$\mu$m, pooling counts over each patient's regions (patients with at least 20 measured $a$-positive cells). This statistic is a neighborhood maximum, not a product moment, and was never part of any loss. The plug-in thresholded at the same cut-off underestimates it (median bias $-26\%$); a quantile-matched plug-in, thresholded at its own 85th percentile on validation patients so that positive fractions match, removes most of the bias ($-6\%$) and lowers error to 0.88 times the plug-in's. \method{} lowers it to 0.62 (median 0.55; bias $+9\%$), with lower error than the quantile-matched plug-in for 83\% of pairs and in 29 of 40 patients (paired Wilcoxon $p=9\times10^{-5}$; MSE ratio 0.70, patient-bootstrap 90\% interval 0.65--0.83), and raises the mean rank correlation from 0.50 to 0.59. Per-pair results are in Table~\ref{tab:contactex}. Raw 90\% interval coverage for these statistics is 52\%.
+Joint samples support nonlinear neighborhood-maximum queries excluded from training. For all 256 ordered marker pairs, we estimate the fraction of $a$-positive cells with a $b$-positive neighbor within 20\,$\mu$m, pooling counts over each patient's regions (at least 20 measured $a$-positive cells). Training-patient 85th-percentile gates define measured positives; marker gates are phenotype proxies. The plug-in underestimates these fractions (median bias $-26\%$). Its validation-quantile gates target nominal 15\% positivity, reduce bias to $-6\%$ and lower MSE to 0.88 of the raw plug-in's. \method{} reaches 0.62 (bias $+9\%$), with lower error than the quantile-matched plug-in for 83\% of pairs and 29 of 40 patients (paired Wilcoxon $p=9\times10^{-5}$; ratio 0.70, patient-bootstrap 90\% interval 0.65--0.83), and raises mean rank correlation from 0.50 to 0.59 (Table~\ref{tab:contactex}). Raw 90\% coverage is 52\%.
 
-With quantile-matched thresholds (\method{}-Q), contact error falls to 0.56 and is below the quantile-matched plug-in's for 97\% of pairs. A direct graph model trained on the contact fractions themselves (three seeds; Appendix~\ref{app:impl}) ties \method{}-Q (0.59 vs 0.56; lung 0.15 vs 0.17; paired 95\% intervals $-0.07$ to 0.06 and 0.00 to 0.05): \method{} matches it without training on contacts, but only with matched thresholds.
+With validation-quantile thresholds (\method{}-Q), contact error falls to 0.56 and is below the quantile-matched plug-in's for 97\% of pairs. A contact-trained direct graph (three seeds; Appendix~\ref{app:impl}) reaches 0.59 (lung 0.15 vs 0.17); paired 95\% difference intervals are $-0.07$ to 0.06 and 0.00 to 0.05. ORION family-average errors are not statistically separated. An exploratory CD8a--epithelial proximity case favors \method{}-Q by \BioContactPercent\% in MSE over that graph (95\% ratio interval \BioContactLo--\BioContactHi; Appendix~\ref{app:biological}); survival comparisons remain inconclusive.
 
 The same holds for per-patient cellular neighborhood frequencies \citep{schurch2020} (eight gated types; 10 neighborhoods of 10-nearest-neighbor compositions, fitted on training patients). Unmatched \method{} does not beat the quantile-matched plug-in (total-variation distance to the measured profile 0.36 vs 0.34), because its Gaussian residual over-calls positive cells; \method{}-Q does (0.29, Wilcoxon $p=0.005$; per-neighborhood MSE 0.53 vs 1.17 of the plug-in's, clusters aligned across rotations), and does so for every stain in Appendix Table~\ref{tab:stains} (0.28--0.36 vs 0.33--0.54, $p\le0.006$ each; Table~\ref{tab:cn}), including the U-Net. A Gaussian copula (training on per-marker normal scores) removes the need for matched thresholds (unmatched: neighborhood distance 0.30, $p=5\times10^{-4}$; contact error 0.59). Other gates and three further query families behave similarly (Appendix~\ref{app:families}).
 
@@ -291,7 +292,7 @@ For model-implied Gaussian per-cell marginals, the certified identification inte
 \section{Discussion}
 \label{sec:discussion}
 
-\method{} trains a shared molecular representation against spatial analyses: the same joint draws support scored statistics and additional queries without refitting the generator. Compared with the matched direct graph, its supported advantage is a lower calibrated overall interval score, an exploratory ORION result driven by cross-marker forecasts that also holds against simple post hoc baselines; a point-prediction advantage is not demonstrated. One constant per statistic removes cohort bias and much of the clustering gain, so attenuation alone does not justify a generator. For a fixed query, direct prediction can be cheaper and more accurate, as on the new Moran and Geary queries. Ablations and independent-cell controls support statistic-level scoring, cross-cell dependence and shared patient variation; the identification analysis characterizes dependence left unspecified by the scores.
+\method{} trains a shared molecular representation against spatial analyses: the same joint draws support scored statistics and additional queries without refitting the generator. Compared with the matched direct graph, its supported advantage is a lower calibrated overall interval score, an exploratory ORION result driven by cross-marker forecasts that also holds against simple post hoc baselines; an overall point-prediction advantage is not demonstrated. One constant per statistic removes cohort bias and much of the clustering gain, so attenuation alone does not justify a generator. For a fixed query, direct prediction can be cheaper and more accurate, as on the new Moran and Geary queries. Ablations and independent-cell controls support statistic-level scoring, cross-cell dependence and shared patient variation; the identification analysis characterizes dependence left unspecified by the scores.
 
 \paragraph{Limitations.} Validation concerns selected statistics, not the full molecular joint law; samples are model realizations. Both cohorts (40 and 19 patients) were examined during development, and lung models are refitted within cohort. The mask-exclusion check does not correct spillover, so some measured clustering may reflect assay artifacts. Statistics use observed crop pairs without edge correction.
 
@@ -634,6 +635,34 @@ Relative to the direct adaptive model, the overall interval-score difference is 
 \caption{H\&E-derived nucleus-plus-rim targets, one seed, five rotations and all 40 patients. MSE ratios use this control's own plug-in; they are not comparable to ratios or absolute errors from a different target definition. Coverage, training-standard-deviation-normalized width and 90\% interval score summarize all 136 statistics. The direct model has lower overall point error; \method{} has lower calibrated interval score.}
 \label{tab:hegeometry}
 \input{appendix_tables/he_geometry.tex}
+\end{table}
+
+\subsection{Exploratory CD8a--epithelial proximity and clinical checks}
+\label{app:biological}
+We examine the fraction of CD8a-positive cells with a Pan-CK-positive neighbor within 20\,$\mu$m, pooling counts across regions. All 40 patients have at least 20 measured source cells. Pan-CK marks epithelium, not specifically tumor; CD8a alone does not establish a T-cell phenotype. This unscored query was fixed before its new comparisons, after development of the broader contact evaluation. The case is exploratory.
+
+\paragraph{Thresholds and assay reconstruction.} Measured positives use training-patient 85th-percentile thresholds. Stain-Q uses each marker's 85th percentile among validation predictions; \method{}-Q uses the same quantile of eight draws in up to 120 validation regions. These existing gates target nominal 15\% positivity without test or clinical labels.
+
+Table~\ref{tab:biological} averages metrics, not predictions, over four generator runs and three contact-trained direct seeds in the reference 24/8/8 rotations. \method{}-Q has MSE \BioContactRatio{} times the graph's (2,000 paired patient bootstraps, 95\% interval \BioContactLo--\BioContactHi); without matching, the ratio is \BioRawRatio{} (\BioRawLo--\BioRawHi). These unadjusted intervals condition on fitted models and omit full training/development uncertainty. Rank-correlation differences are inconclusive. Significance against the graph does not itself establish a Q-versus-raw effect. This case does not replace the family comparison or test all query-specific corrections.
+
+\begin{table}[!htp]
+\centering
+\caption{CD8a--epithelial proximity recovery, all 40 held-out patients. MSE is relative to the raw stain; smaller is better. Metrics average runs. Q denotes validation-quantile gates.}
+\label{tab:biological}
+\input{appendix_tables/biological_case.tex}
+\end{table}
+
+\paragraph{Clinical-design diagnostic.} We use final published Supplementary Table~3 of \citet{orion2023}: 39 complete progression-free-survival records (24 events, 15 censored); assay evaluation retains all 40 patients. With higher proximity fixed as favorable, initial pooled Harrell concordance is 0.548 for measured proximity, 0.525 for \method{}-Q and 0.521 for the graph, an inconclusive difference. This fraction removes immune abundance and lacks the tumor-core/invasive-margin coverage of the published immune score.
+
+One fixed redesign uses engaged-cell burden: CD8a-positive cells with an epithelial neighbor divided by all retained cells, with abundance alone as control. We pool counts, form each draw's feature, then average draws. Models, gates, markers, radius, outcome and risk direction stay fixed. Within-fold concordance avoids comparing uncalibrated risk scales across models (98 event pairs; 2,000 fold-stratified patient bootstraps). Pooled and within-fold/same-stage comparisons (32 pairs) are secondary. All analyses are post hoc.
+
+Measured concordance is \BioMeasuredContactC{} for the fraction, \BioMeasuredBurdenC{} for burden and \BioMeasuredAbundanceC{} for abundance (Table~\ref{tab:clinicalcase}); burden-minus-abundance is inconclusive. For burden, \method{}-Q reaches \BioLigBurdenC{} versus the graph's \BioDirectBurdenC{} (difference \BioBurdenDelta, 95\% interval $[\BioBurdenLo,\BioBurdenHi]$). Stage alone reaches \BioStageC{} and published IFM1 \BioIFMC{}, a retrospective reference rather than independent validation here. Same-stage comparisons remain inconclusive. The redesign establishes neither incremental prognostic value from spatial dependence nor clinical benefit.
+
+\begin{table}[!htp]
+\centering
+\caption{Exploratory within-fold progression-free-survival concordance, 39 patients. Higher features are favorable. Burden uses all cells; abundance omits contact. All reported model/feature-difference intervals include zero.}
+\label{tab:clinicalcase}
+\input{appendix_tables/clinical_case.tex}
 \end{table}
 
 \end{document}

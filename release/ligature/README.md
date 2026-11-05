@@ -85,6 +85,42 @@ its own `--out`. `--objective ml` evaluates the conditional random-feature
 Gaussian-likelihood alternative with its numerical nugget; it is not the
 likelihood integrated over random-feature draws.
 
+## CD8a–epithelial proximity case
+
+The manuscript includes an exploratory case using the fraction of CD8a-positive
+cells with a Pan-CK-positive neighbor within 20 µm. Across four frozen generator
+runs and three contact-trained direct seeds, LIGATURE-Q has 26% lower MSE than
+the direct model for this query (paired 95% ratio interval 0.559–0.916).
+Q uses each marker's validation-prediction 85th percentile; the assay gates come
+from training patients. These are marker proxies, not definitive T-cell or tumor
+annotations. This single-query result does not imply superiority across all
+contacts. Progression-free-survival checks, including a redesign that retains
+immune abundance, do not establish improved prognosis or clinical benefit.
+
+To replay the case from regenerated frozen outputs, provide the four generator
+run directories and the directory holding the three direct-contact seeds:
+
+```bash
+python release/ligature/src/biological_case.py \
+  --generator-runs outputs/reference outputs/seed1 outputs/seed2 outputs/seed3 \
+  --direct-dir outputs/reference \
+  --clinical-table /path/to/published_supplementary_tables.xlsx \
+  --output paper/biological_case.json
+python release/ligature/src/render_biological_case.py \
+  --summary paper/biological_case.json --paper-dir paper
+```
+
+Run from the repository root. Generator directories contain five `fold*/contact_stats.npz`
+files from `eval_contact.py`; the reference run also contains `fold*/test_stats.npz`
+cell counts. Direct files are `fold*/direct_contact_b0.npz`, `_b1.npz`, and `_b2.npz`.
+Use `--reference-run` if cell counts are elsewhere and `--direct-tags` for other
+seed suffixes. The optional clinical table is the original ORION study's
+[published Supplementary Tables 1–5](https://static-content.springer.com/esm/art%3A10.1038%2Fs43018-023-00576-1/MediaObjects/43018_2023_576_MOESM2_ESM.xlsx);
+omit that argument for assay recovery alone. Only aggregates are written.
+The included `paper/biological_case.json` regenerates the case tables and numeric
+macros without patient data. Confidence intervals condition on the fitted models;
+they do not capture all development or training uncertainty.
+
 ## Lung Xenium cohort
 
 Obtain access to HEST-1k and accept its terms before downloading:

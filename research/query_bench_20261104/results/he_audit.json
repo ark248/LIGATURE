@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "patients": 40,
+  "folds": 5,
+  "seed": 271027,
+  "patient_rows": 65280,
+  "summary_rows": 36,
+  "paired_point": [
+    {
+      "family": "all136",
+      "MSE_ratio_over_plugin": 0.9601138153099986,
+      "MSE_ratio_ci95": [
+        0.8963606367207705,
+        1.1162135070770072
+      ],
+      "normalized_error_difference_from_direct": 0.03481210712709202,
+      "difference_from_direct_ci95": [
+        -0.03173235071340815,
+        0.09853179732099678
+      ]
+    },
+    {
+      "family": "clustering16",
+      "MSE_ratio_over_plugin": 0.7005432394666846,
+      "MSE_ratio_ci95": [
+        0.6230575029519755,
+        0.8912429022886997
+      ],
+      "normalized_error_difference_from_direct": -0.020181872095832755,
+      "difference_from_direct_ci95": [
+        -0.1395917712317245,
+        0.07922779529050326
+      ]
+    },
+    {
+      "family": "cross120",
+      "MSE_ratio_over_plugin": 0.9947232254224405,
+      "MSE_ratio_ci95": [
+        0.9333783365260344,
+        1.1522520448512825
+      ],
+      "normalized_error_difference_from_direct": 0.042144637690148645,
+      "difference_from_direct_ci95": [
+        -0.018088449767026903,
+        0.10828317555276325
+      ]
+    }
+  ],
+  "intervals_recalculated": true,
+  "all_MSE_ratios_recalculated": true,
+  "report_sha256": "2cab351c3491027538376d240bb4c3c9a71d4a554bc14dc68d922f46f615262f",
+  "scope": "Single-seed input/target-definition sensitivity on the originally selected crop release. Not whole-slide validation or spillover correction."
+}

@@ -1,0 +1,13 @@
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Estimator & MSE all & MSE same & $\rho$ & bias \\
+\midrule
+Plug-in (cell-graph transformer stain) & 1.00 & 1.00 & 0.46 & $-71\%$ \\
+Global rescale of the plug-in & 1.03 & 0.83 & 0.45 & $-60\%$ \\
+Direct graph model (statistics, no cells) & 0.93 & 0.55 & 0.39 & $-21\%$ \\
+\method{} around a constant stain & 0.91 & 0.52 & 0.43 & $-18\%$ \\
+\method{} around a constant stain, learned mean & 0.90 & 0.53 & 0.47 & $-24\%$ \\
+Direct graph with stain inputs (statistics, no cells) & 0.82 & 0.49 & 0.49 & $-24\%$ \\
+\method{} around the transformer stain & 0.84 & 0.48 & 0.48 & $-23\%$ \\
+\bottomrule
+\end{tabular}

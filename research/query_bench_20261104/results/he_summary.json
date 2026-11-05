@@ -1,0 +1,885 @@
+{
+  "status": "complete",
+  "seed": 271027,
+  "patients": 40,
+  "folds": 5,
+  "metrics": [
+    {
+      "family": "all136",
+      "method": "direct_adaptive",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.9056985294117647,
+      "coverage_ci95_descriptive": [
+        0.8692968750000001,
+        0.9367647058823529
+      ],
+      "mean_width": 0.3213074040328554,
+      "mean_width_normalized": 4.699144868677044,
+      "mean_interval_score_normalized": 6.95920786680582,
+      "mse_relative_to_matched_plugin": 0.9253017081829067,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "direct_constant",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.903125,
+      "coverage_ci95_descriptive": [
+        0.8652573529411764,
+        0.9347472426470589
+      ],
+      "mean_width": 0.3188824458218947,
+      "mean_width_normalized": 4.655344662733157,
+      "mean_interval_score_normalized": 6.9435853687827205,
+      "mse_relative_to_matched_plugin": 0.9253017081829067,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "direct_raw",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.728125,
+      "coverage_ci95_descriptive": [
+        0.6676378676470588,
+        0.7814384191176471
+      ],
+      "mean_width": 0.10548117230236241,
+      "mean_width_normalized": 1.4865893597664699,
+      "mean_interval_score_normalized": 6.9301245346244675,
+      "mse_relative_to_matched_plugin": 0.9253017081829067,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "family_rescale_conformal",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.8970588235294118,
+      "coverage_ci95_descriptive": [
+        0.8511029411764707,
+        0.9365808823529413
+      ],
+      "mean_width": 0.37773702011725596,
+      "mean_width_normalized": 5.4831667184647594,
+      "mean_interval_score_normalized": 8.12516533528012,
+      "mse_relative_to_matched_plugin": 1.6957717876718488,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "ligature_conformal",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.9056985294117647,
+      "coverage_ci95_descriptive": [
+        0.8737132352941177,
+        0.9316176470588236
+      ],
+      "mean_width": 0.3043711868539343,
+      "mean_width_normalized": 4.456062126852681,
+      "mean_interval_score_normalized": 6.109803536723313,
+      "mse_relative_to_matched_plugin": 0.9601138153099986,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "ligature_constant_scale_conformal",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.9079044117647059,
+      "coverage_ci95_descriptive": [
+        0.871686580882353,
+        0.938607536764706
+      ],
+      "mean_width": 0.32129874315030654,
+      "mean_width_normalized": 4.6982536576797855,
+      "mean_interval_score_normalized": 6.890671104800832,
+      "mse_relative_to_matched_plugin": 0.9601138153099986,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "ligature_raw_ensemble",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.5799632352941176,
+      "coverage_ci95_descriptive": [
+        0.5286580882352941,
+        0.6303354779411765
+      ],
+      "mean_width": 0.09037579579123388,
+      "mean_width_normalized": 1.3689864714150926,
+      "mean_interval_score_normalized": 7.166547341325107,
+      "mse_relative_to_matched_plugin": 0.9601138153099986,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "plugin_conformal",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.9029411764705882,
+      "coverage_ci95_descriptive": [
+        0.863763786764706,
+        0.9363970588235293
+      ],
+      "mean_width": 0.33778854066451247,
+      "mean_width_normalized": 4.825540592729607,
+      "mean_interval_score_normalized": 7.178789216937387,
+      "mse_relative_to_matched_plugin": 1.0,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "plugin_raw_gaussian",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.7237132352941177,
+      "coverage_ci95_descriptive": [
+        0.6569852941176471,
+        0.7876838235294118
+      ],
+      "mean_width": 0.1898479082806529,
+      "mean_width_normalized": 2.6404509545297032,
+      "mean_interval_score_normalized": 8.001948703710427,
+      "mse_relative_to_matched_plugin": 1.0,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "rescale_conformal",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.8919117647058824,
+      "coverage_ci95_descriptive": [
+        0.843920036764706,
+        0.9334650735294119
+      ],
+      "mean_width": 0.3840660739614738,
+      "mean_width_normalized": 5.582017085476614,
+      "mean_interval_score_normalized": 8.306764123720281,
+      "mse_relative_to_matched_plugin": 1.9577817419524755,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "rescale_ligature_scale_conformal",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.9134191176470589,
+      "coverage_ci95_descriptive": [
+        0.8737132352941177,
+        0.9443014705882351
+      ],
+      "mean_width": 0.3667507921663962,
+      "mean_width_normalized": 5.2774412578793575,
+      "mean_interval_score_normalized": 6.985774716773235,
+      "mse_relative_to_matched_plugin": 1.9577817419524755,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "all136",
+      "method": "rescale_raw_gaussian",
+      "patients": 40,
+      "queries": 136,
+      "coverage": 0.6404411764705882,
+      "coverage_ci95_descriptive": [
+        0.5845542279411765,
+        0.6930193014705882
+      ],
+      "mean_width": 0.17165623471981448,
+      "mean_width_normalized": 2.5307676930446177,
+      "mean_interval_score_normalized": 9.531421633512604,
+      "mse_relative_to_matched_plugin": 1.9577817419524755,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "direct_adaptive",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.9078125,
+      "coverage_ci95_descriptive": [
+        0.871875,
+        0.9375
+      ],
+      "mean_width": 0.6462143237575231,
+      "mean_width_normalized": 4.705010413573812,
+      "mean_interval_score_normalized": 6.998719020973411,
+      "mse_relative_to_matched_plugin": 0.7207251115625173,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "direct_constant",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.9109375,
+      "coverage_ci95_descriptive": [
+        0.8749609375,
+        0.9421875
+      ],
+      "mean_width": 0.6457858166540973,
+      "mean_width_normalized": 4.670930162724107,
+      "mean_interval_score_normalized": 6.974043635744602,
+      "mse_relative_to_matched_plugin": 0.7207251115625173,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "direct_raw",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.70625,
+      "coverage_ci95_descriptive": [
+        0.6421484375000001,
+        0.765625
+      ],
+      "mean_width": 0.18930752308469895,
+      "mean_width_normalized": 1.3196366137475728,
+      "mean_interval_score_normalized": 7.352316358705655,
+      "mse_relative_to_matched_plugin": 0.7207251115625173,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "family_rescale_conformal",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.8875,
+      "coverage_ci95_descriptive": [
+        0.8468359375000001,
+        0.925
+      ],
+      "mean_width": 0.6852672603054109,
+      "mean_width_normalized": 4.944354220483629,
+      "mean_interval_score_normalized": 7.77150407600363,
+      "mse_relative_to_matched_plugin": 1.2545735491514893,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_conformal",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.9078125,
+      "coverage_ci95_descriptive": [
+        0.871875,
+        0.9375
+      ],
+      "mean_width": 0.6132460035965778,
+      "mean_width_normalized": 4.505242066388019,
+      "mean_interval_score_normalized": 6.353056552098133,
+      "mse_relative_to_matched_plugin": 0.7005432394666846,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_constant_scale_conformal",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.9109375,
+      "coverage_ci95_descriptive": [
+        0.878125,
+        0.940625
+      ],
+      "mean_width": 0.6359248591354116,
+      "mean_width_normalized": 4.5848367476835845,
+      "mean_interval_score_normalized": 6.675433998322115,
+      "mse_relative_to_matched_plugin": 0.7005432394666846,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_raw_ensemble",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.3734375,
+      "coverage_ci95_descriptive": [
+        0.3296875,
+        0.4171875
+      ],
+      "mean_width": 0.12166889475137847,
+      "mean_width_normalized": 0.9152051619793486,
+      "mean_interval_score_normalized": 8.625172006074967,
+      "mse_relative_to_matched_plugin": 0.7005432394666846,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "plugin_conformal",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.8984375,
+      "coverage_ci95_descriptive": [
+        0.8625,
+        0.9296875
+      ],
+      "mean_width": 0.7361961253918707,
+      "mean_width_normalized": 5.289176820218563,
+      "mean_interval_score_normalized": 8.007133892644196,
+      "mse_relative_to_matched_plugin": 1.0,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "plugin_raw_gaussian",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.6890625,
+      "coverage_ci95_descriptive": [
+        0.621875,
+        0.7515625
+      ],
+      "mean_width": 0.3825744244575617,
+      "mean_width_normalized": 2.8711764390172902,
+      "mean_interval_score_normalized": 8.992985463608056,
+      "mse_relative_to_matched_plugin": 1.0,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "rescale_conformal",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.8890625,
+      "coverage_ci95_descriptive": [
+        0.8499609375,
+        0.925
+      ],
+      "mean_width": 0.67094311240362,
+      "mean_width_normalized": 4.849664400750771,
+      "mean_interval_score_normalized": 7.2272461403161286,
+      "mse_relative_to_matched_plugin": 0.8958370773794786,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "rescale_ligature_scale_conformal",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.8953125,
+      "coverage_ci95_descriptive": [
+        0.8562109375,
+        0.928125
+      ],
+      "mean_width": 0.6839385817002039,
+      "mean_width_normalized": 5.0988814673619345,
+      "mean_interval_score_normalized": 7.0408204949228095,
+      "mse_relative_to_matched_plugin": 0.8958370773794786,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "clustering16",
+      "method": "rescale_raw_gaussian",
+      "patients": 40,
+      "queries": 16,
+      "coverage": 0.625,
+      "coverage_ci95_descriptive": [
+        0.559375,
+        0.6875
+      ],
+      "mean_width": 0.31251233659131683,
+      "mean_width_normalized": 2.422005042922683,
+      "mean_interval_score_normalized": 8.682584094605408,
+      "mse_relative_to_matched_plugin": 0.8958370773794786,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "direct_adaptive",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.9054166666666666,
+      "coverage_ci95_descriptive": [
+        0.8662500000000002,
+        0.9377135416666667
+      ],
+      "mean_width": 0.2779864814028997,
+      "mean_width_normalized": 4.698362796024141,
+      "mean_interval_score_normalized": 6.953939712916808,
+      "mse_relative_to_matched_plugin": 0.9525785877322919,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "direct_constant",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.9020833333333333,
+      "coverage_ci95_descriptive": [
+        0.8624947916666668,
+        0.9356249999999999
+      ],
+      "mean_width": 0.2752953297109343,
+      "mean_width_normalized": 4.653266596067697,
+      "mean_interval_score_normalized": 6.939524266521136,
+      "mse_relative_to_matched_plugin": 0.9525785877322919,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "direct_raw",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.7310416666666667,
+      "coverage_ci95_descriptive": [
+        0.6704166666666668,
+        0.7852239583333334
+      ],
+      "mean_width": 0.09430432553138421,
+      "mean_width_normalized": 1.5088497259023226,
+      "mean_interval_score_normalized": 6.873832291413643,
+      "mse_relative_to_matched_plugin": 0.9525785877322919,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "family_rescale_conformal",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.8983333333333333,
+      "coverage_ci95_descriptive": [
+        0.850625,
+        0.9391770833333333
+      ],
+      "mean_width": 0.3367329880921686,
+      "mean_width_normalized": 5.555008384862243,
+      "mean_interval_score_normalized": 8.172320169850314,
+      "mse_relative_to_matched_plugin": 1.7545982194745633,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_conformal",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.9054166666666666,
+      "coverage_ci95_descriptive": [
+        0.87375,
+        0.931875
+      ],
+      "mean_width": 0.26318787795491516,
+      "mean_width_normalized": 4.449504801581304,
+      "mean_interval_score_normalized": 6.077369801340004,
+      "mse_relative_to_matched_plugin": 0.9947232254224405,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_constant_scale_conformal",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.9075,
+      "coverage_ci95_descriptive": [
+        0.8699947916666666,
+        0.9395885416666665
+      ],
+      "mean_width": 0.27934859435229253,
+      "mean_width_normalized": 4.7133759123459456,
+      "mean_interval_score_normalized": 6.919369385664662,
+      "mse_relative_to_matched_plugin": 0.9947232254224405,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_raw_ensemble",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.6075,
+      "coverage_ci95_descriptive": [
+        0.55165625,
+        0.6620833333333334
+      ],
+      "mean_width": 0.08620338259654794,
+      "mean_width_normalized": 1.429490646006525,
+      "mean_interval_score_normalized": 6.9720640526917945,
+      "mse_relative_to_matched_plugin": 0.9947232254224405,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "plugin_conformal",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.9035416666666667,
+      "coverage_ci95_descriptive": [
+        0.8624947916666668,
+        0.9383385416666665
+      ],
+      "mean_width": 0.2846675293675313,
+      "mean_width_normalized": 4.763722429064413,
+      "mean_interval_score_normalized": 7.06834326017648,
+      "mse_relative_to_matched_plugin": 1.0,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "plugin_raw_gaussian",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.7283333333333334,
+      "coverage_ci95_descriptive": [
+        0.6606249999999999,
+        0.7937656249999999
+      ],
+      "mean_width": 0.16415103945706505,
+      "mean_width_normalized": 2.609687556598025,
+      "mean_interval_score_normalized": 7.869810469057411,
+      "mse_relative_to_matched_plugin": 1.0,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "rescale_conformal",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.8922916666666667,
+      "coverage_ci95_descriptive": [
+        0.8416666666666668,
+        0.9358385416666667
+      ],
+      "mean_width": 0.3458158021691876,
+      "mean_width_normalized": 5.679664110106726,
+      "mean_interval_score_normalized": 8.450699854840835,
+      "mse_relative_to_matched_plugin": 2.0993743638955418,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "rescale_ligature_scale_conformal",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.9158333333333334,
+      "coverage_ci95_descriptive": [
+        0.8756197916666667,
+        0.9479166666666666
+      ],
+      "mean_width": 0.32445908689522185,
+      "mean_width_normalized": 5.301249229948347,
+      "mean_interval_score_normalized": 6.978435279686625,
+      "mse_relative_to_matched_plugin": 2.0993743638955418,
+      "finite_interval_fraction": 1.0
+    },
+    {
+      "family": "cross120",
+      "method": "rescale_raw_gaussian",
+      "patients": 40,
+      "queries": 120,
+      "coverage": 0.6425,
+      "coverage_ci95_descriptive": [
+        0.5858281249999999,
+        0.695421875
+      ],
+      "mean_width": 0.1528754211369475,
+      "mean_width_normalized": 2.5452693797275425,
+      "mean_interval_score_normalized": 9.644599972033562,
+      "mse_relative_to_matched_plugin": 2.0993743638955418,
+      "finite_interval_fraction": 1.0
+    }
+  ],
+  "paired": [
+    {
+      "family": "all136",
+      "method": "ligature_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "width_normalized",
+      "ratio": 0.9482708559498406,
+      "difference": -0.24308274182436182,
+      "difference_ci95": [
+        -0.8875658987951927,
+        0.4818510486344688
+      ]
+    },
+    {
+      "family": "all136",
+      "method": "ligature_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "interval_score_normalized",
+      "ratio": 0.877945256652842,
+      "difference": -0.8494043300825069,
+      "difference_ci95": [
+        -1.4848039766113665,
+        -0.2692547322408498
+      ]
+    },
+    {
+      "family": "all136",
+      "method": "ligature_conformal",
+      "baseline": "direct_constant",
+      "metric": "width_normalized",
+      "ratio": 0.9571927428970476,
+      "difference": -0.19928253588047537,
+      "difference_ci95": [
+        -0.873812227304477,
+        0.5400763573447522
+      ]
+    },
+    {
+      "family": "all136",
+      "method": "ligature_conformal",
+      "baseline": "direct_constant",
+      "metric": "interval_score_normalized",
+      "ratio": 0.8799205615289242,
+      "difference": -0.833781832059407,
+      "difference_ci95": [
+        -1.4916776567692045,
+        -0.22215015277841743
+      ]
+    },
+    {
+      "family": "all136",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "width_normalized",
+      "ratio": 0.999810346132719,
+      "difference": -0.0008912109972575965,
+      "difference_ci95": [
+        -0.08402393562217692,
+        0.06855429226938416
+      ]
+    },
+    {
+      "family": "all136",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "interval_score_normalized",
+      "ratio": 0.9901516432161919,
+      "difference": -0.0685367620049873,
+      "difference_ci95": [
+        -0.21560987723003222,
+        0.0763614590487756
+      ]
+    },
+    {
+      "family": "all136",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_constant",
+      "metric": "width_normalized",
+      "ratio": 1.00921714675395,
+      "difference": 0.042908994946628934,
+      "difference_ci95": [
+        0.010325943265274704,
+        0.07477093757089122
+      ]
+    },
+    {
+      "family": "all136",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_constant",
+      "metric": "interval_score_normalized",
+      "ratio": 0.9923794032662461,
+      "difference": -0.052914263981887436,
+      "difference_ci95": [
+        -0.19709690748508454,
+        0.0787371013405293
+      ]
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "width_normalized",
+      "ratio": 0.9575413591839312,
+      "difference": -0.19976834718579406,
+      "difference_ci95": [
+        -0.769082721593483,
+        0.44321147503748326
+      ]
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "interval_score_normalized",
+      "ratio": 0.907745622171659,
+      "difference": -0.6456624688752781,
+      "difference_ci95": [
+        -1.221648942994335,
+        -0.19191146819462893
+      ]
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_conformal",
+      "baseline": "direct_constant",
+      "metric": "width_normalized",
+      "ratio": 0.964527815539109,
+      "difference": -0.16568809633608908,
+      "difference_ci95": [
+        -0.7646960042411229,
+        0.5018859650567172
+      ]
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_conformal",
+      "baseline": "direct_constant",
+      "metric": "interval_score_normalized",
+      "ratio": 0.9109573848285554,
+      "difference": -0.6209870836464688,
+      "difference_ci95": [
+        -1.2179124817822595,
+        -0.1529652886150874
+      ]
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "width_normalized",
+      "ratio": 0.9744583634621657,
+      "difference": -0.12017366589022775,
+      "difference_ci95": [
+        -0.2767993651767571,
+        0.039923353121075415
+      ]
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "interval_score_normalized",
+      "ratio": 0.9538079723328666,
+      "difference": -0.3232850226512964,
+      "difference_ci95": [
+        -0.5436047246595607,
+        -0.11219504885800405
+      ]
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_constant",
+      "metric": "width_normalized",
+      "ratio": 0.9815682504252402,
+      "difference": -0.08609341504052281,
+      "difference_ci95": [
+        -0.22195825639995745,
+        0.05176575955003499
+      ]
+    },
+    {
+      "family": "clustering16",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_constant",
+      "metric": "interval_score_normalized",
+      "ratio": 0.9571827116348971,
+      "difference": -0.29860963742248714,
+      "difference_ci95": [
+        -0.5151563425047789,
+        -0.0900942414568272
+      ]
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "width_normalized",
+      "ratio": 0.9470330399658735,
+      "difference": -0.24885799444283746,
+      "difference_ci95": [
+        -0.9047991355531709,
+        0.49434875306013815
+      ]
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "interval_score_normalized",
+      "ratio": 0.873946288325078,
+      "difference": -0.8765699115768042,
+      "difference_ci95": [
+        -1.5735052735105233,
+        -0.23272990969800042
+      ]
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_conformal",
+      "baseline": "direct_constant",
+      "metric": "width_normalized",
+      "ratio": 0.956211020735716,
+      "difference": -0.20376179448639342,
+      "difference_ci95": [
+        -0.8818592478515735,
+        0.5434958974573115
+      ]
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_conformal",
+      "baseline": "direct_constant",
+      "metric": "interval_score_normalized",
+      "ratio": 0.8757617335037665,
+      "difference": -0.8621544651811321,
+      "difference_ci95": [
+        -1.5912537298896348,
+        -0.20427790513851998
+      ]
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "width_normalized",
+      "ratio": 1.003195393155784,
+      "difference": 0.015013116321805109,
+      "difference_ci95": [
+        -0.06643679774758489,
+        0.08122014869417199
+      ]
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_adaptive",
+      "metric": "interval_score_normalized",
+      "ratio": 0.9950286702675991,
+      "difference": -0.0345703272521463,
+      "difference_ci95": [
+        -0.17513627241668545,
+        0.10950933144688772
+      ]
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_constant",
+      "metric": "width_normalized",
+      "ratio": 1.0129176601076424,
+      "difference": 0.06010931627824908,
+      "difference_ci95": [
+        0.03755467115994542,
+        0.08293940819955134
+      ]
+    },
+    {
+      "family": "cross120",
+      "method": "ligature_constant_scale_conformal",
+      "baseline": "direct_constant",
+      "metric": "interval_score_normalized",
+      "ratio": 0.997095639400858,
+      "difference": -0.0201548808564743,
+      "difference_ci95": [
+        -0.16595689549188464,
+        0.11059187631122756
+      ]
+    }
+  ],
+  "dataset": {
+    "crops": 789,
+    "nonempty_crops": 789,
+    "patients": 40,
+    "cells": 79600,
+    "seconds": 682.9555987089407,
+    "plan_sha256": "b218b9635504619d4623a5ba5ac03c58364b90022e4443d32fc3407e1401208d",
+    "segmentation_model_sha256": "0c724da169d507d8dd2e206ad3675a0b1566824eee6e20ad9a0ba916311d9dd0",
+    "assay_masks_read": false
+  },
+  "scope": "Single-seed exploratory geometry/target-definition control. All model inputs use H&E-derived proxies; paired molecular images supply targets. Original selected crop release, not whole-slide validation or optical spillover correction. Different targets preclude comparison of absolute performance with the primary whole-cell study."
+}

@@ -1,0 +1,34 @@
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.85in}>{\raggedright\arraybackslash}p{3.2in}ccc@{}}
+\toprule
+Stain & Estimator & MSE all & MSE same & $\rho$ \\
+\midrule
+No stain & Direct ridge on region features & 1.42 & 0.99 & 0.31 \\
+ & Direct graph (no stain) & 1.30 & 0.91 & 0.38 \\
+ & \method{} around a constant stain & 1.13 & 0.76 & 0.46 \\
+ & \method{} around a constant stain, learned mean & 1.00 & 0.75 & 0.48 \\
+\addlinespace
+Transformer & plug-in & 1.00 & 1.00 & 0.52 \\
+ & global rescale & 0.89 & 0.83 & 0.54 \\
+ & Direct graph (stain inputs) & 0.89 & 0.63 & 0.53 \\
+ & regularized conditional Gaussian NLL & 2.75 & 4.46 & 0.35 \\
+ & \method{} & 0.88 & 0.60 & 0.53 \\
+\addlinespace
+Ridge & plug-in & 1.36 & 1.32 & 0.42 \\
+ & \method{} & 1.13 & 0.78 & 0.42 \\
+\addlinespace
+U-Net & plug-in & 1.07 & 0.98 & 0.51 \\
+ & \method{} & 1.09 & 0.76 & 0.47 \\
+ & \method{}, learned mean correction & 1.03 & 0.72 & 0.48 \\
+\addlinespace
+ROSIE & plug-in & 2.37 & 2.37 & 0.18 \\
+ & \method{} & 1.17 & 0.87 & 0.46 \\
+\addlinespace
+GigaTIME & plug-in & 1.80 & 1.86 & 0.28 \\
+ & \method{} & 1.14 & 0.79 & 0.43 \\
+ & \method{}, learned mean correction & 1.09 & 0.74 & 0.44 \\
+\addlinespace
+GigaTIME fine-tuned & plug-in & 1.12 & 0.95 & 0.51 \\
+ & \method{} & 1.05 & 0.74 & 0.51 \\
+ & \method{}, learned mean correction & 1.06 & 0.72 & 0.51 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "patients": 40,
+  "seeds": 3,
+  "patient_rows": 489600,
+  "metric_rows": 87,
+  "same_truth_across_methods": true,
+  "intervals_recalculated": true,
+  "all_MSE_ratios_recalculated": true,
+  "report_sha256": "71143f7ba5e56ef5ae53f81c481c3e16d3c43c7f3b6346728d98930ef57e91f6",
+  "method_scope": "Development-cohort evidence; paired intervals condition on fits and do not include all cross-fold dependence."
+}

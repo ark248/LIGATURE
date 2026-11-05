@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the LIGATURE manuscript when using this software."
+type: software
+title: "LIGATURE: Generative Inference of Spatial Molecular Organization from Histology"
+authors:
+  - family-names: Arulselvan
+    given-names: Adhiban
+license: MIT
+repository-code: "https://github.com/ark248/LIGATURE"
+abstract: "A spatial-statistic-scored joint residual generator around a frozen virtual stain."

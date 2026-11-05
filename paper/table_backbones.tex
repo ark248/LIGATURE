@@ -1,0 +1,14 @@
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+ & cell & \multicolumn{2}{c}{bias} & \multicolumn{2}{c}{MSE / plug-in} & CRPS & \multicolumn{2}{c}{contact MSE} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){8-9}
+Virtual stain & MSE & plug-in & \method{} & all & same & \method{}/Gauss. & quant. & \method{} \\
+\midrule
+Cell-graph transformer & 0.78 & $-34\%$ & $-6\%$ & 0.88 & 0.60 & 0.84 & 0.88 & 0.62 \\
+Per-cell ridge, no context & 0.85 & $-39\%$ & $-2\%$ & 0.86 & 0.64 & 0.84 & 0.83 & 0.72 \\
+Pixel U-Net & 0.78 & $-12\%$ & $+3\%$ & 1.04 & 0.84 & 0.90 & 0.94 & 0.62 \\
+ROSIE & 1.04 & $-94\%$ & $+5\%$ & 0.61 & 0.45 & 0.66 & 1.71 & 0.47 \\
+GigaTIME$^\dagger$ & 0.95 & $-68\%$ & $-6\%$ & 0.73 & 0.52 & 0.72 & 0.63 & 0.40 \\
+GigaTIME fine-tuned & 0.78 & $-7\%$ & $+8\%$ & 0.96 & 0.81 & 0.89 & 0.94 & 0.67 \\
+\bottomrule
+\end{tabular}

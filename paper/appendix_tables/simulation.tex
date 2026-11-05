@@ -1,0 +1,26 @@
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & \multicolumn{3}{c}{Correct model class} & \multicolumn{3}{c}{Within-cell dependence added} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Contrast estimator & MSE all & MSE same & bias & MSE all & MSE same & bias \\
+\midrule
+Plug-in of the true mean & 1.00 & 1.00 & $-38\%$ & 1.00 & 1.00 & $-37\%$ \\
+\method{} & 0.59 & 0.12 & $+1\%$ & 0.61 & 0.12 & $+2\%$ \\
+Bayes statistic predictor & 0.32 & 0.07 & $-1\%$ & 0.33 & 0.07 & $0\%$ \\
+\bottomrule
+\end{tabular}
+
+\medskip
+
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+ & \multicolumn{4}{c}{Correct model class} & \multicolumn{4}{c}{Within-cell dependence added} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+ & \multicolumn{2}{c}{within cell} & \multicolumn{2}{c}{0--25\,\textmu m} & \multicolumn{2}{c}{within cell} & \multicolumn{2}{c}{0--25\,\textmu m} \\
+Residual correlation & true & \method{} & true & \method{} & true & \method{} & true & \method{} \\
+\midrule
+CD8a / Pan-CK & $-0.14$ & $-0.00$ & $-0.12$ & $-0.09$ & $+0.22$ & $+0.01$ & $-0.09$ & $-0.06$ \\
+CD68 / PD-L1 & $+0.01$ & $-0.11$ & $-0.03$ & $-0.01$ & $+0.36$ & $-0.20$ & $-0.02$ & $-0.01$ \\
+Other 118 pairs, mean abs.\ error & \multicolumn{2}{c}{0.12} & \multicolumn{2}{c}{0.02} & \multicolumn{2}{c}{0.12} & \multicolumn{2}{c}{0.01} \\
+\bottomrule
+\end{tabular}

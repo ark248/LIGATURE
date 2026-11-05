@@ -1,0 +1,15 @@
+huggingface_hub==2.3.0
+matplotlib==3.11.2
+numpy==2.4.6
+pandas==3.1.0
+Pillow==13.0.0
+pyarrow==26.0.0
+scikit-image==0.26.0
+scikit-learn==1.9.1
+scipy==1.17.1
+tifffile==2026.3.3
+# Install the appropriate PyTorch build for your platform first if needed.
+# The development environment used the +cu126 builds of these base versions.
+torch==2.14.1
+torchvision==0.29.1
+transformers==5.21.0

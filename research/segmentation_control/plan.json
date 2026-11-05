@@ -1,0 +1,11 @@
+{
+  "registered_before_metric_computation_utc": "2026-11-04",
+  "purpose": "Sensitivity of same-marker 0-25 versus 50-75 micrometer contrasts to immediately adjacent supplied cell masks; not proof of spillover removal.",
+  "model": "Existing primary five-fold frozen stain and calibrated generator; no retraining or hyperparameter selection.",
+  "pair_rule": "Exclude a near pair if any pixels in its two supplied whole-cell masks have Chebyshev distance at most 2 pixels (0.65 micrometers along an axis). Apply the same exclusion to measured, plug-in and model statistics; leave the far bin unchanged.",
+  "regions": "All primary eligible held-out regions with at least one retained near pair; compare unrestricted and restricted statistics on that same region set.",
+  "estimand": "Patient average of region near-minus-far same-marker products, 16 markers; equal region weight within patient, all 40 patients.",
+  "generator_mean": "Exact second-moment expectation after integrating Gaussian fields and random Fourier features, not a new Monte Carlo fit.",
+  "summaries": "Mean across markers of patient MSE ratios against each diagnostic's own plug-in; median relative cohort bias for measured means above 0.02 in absolute magnitude; 95% patient-bootstrap intervals with 2000 replicates.",
+  "limits": "Post-development sensitivity analysis; pair exclusion changes the target and does not correct intensity spillover, segmentation errors, or longer-range optical contamination. No selected-marker optimization."
+}

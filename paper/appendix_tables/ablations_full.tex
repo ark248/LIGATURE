@@ -1,0 +1,59 @@
+\begin{longtable}{@{}p{.50in}p{2in}cccccc@{}}
+\caption{Systematic ablations: each variant is the reference configuration with one change, five patient-held-out rotations (ORION 40 patients, lung 19). MSE is patient-level MSE relative to the plug-in over all 136 statistics and the 16 clustering statistics; $\rho$ mean Spearman correlation; bias median relative bias; coverage of nominal 90\% intervals raw and after inflation. $^*$: some metric outside the range of the reference seeds. ORION's seeds are current-code runs of the reference configuration; the reference run of Table~\ref{tab:main} is a separate, earlier run. Per-patient Wilcoxon tests against the reference are in \texttt{research/ABLATIONS.md}.}\label{tab:ablationfull}\\
+\toprule
+Cohort & Variant & \shortstack{MSE\\all} & \shortstack{MSE\\same} & $\rho$ & bias & CRPS & \shortstack{cov.\\raw / infl.} \\
+\midrule
+\endfirsthead
+\toprule
+Cohort & Variant & \shortstack{MSE\\all} & \shortstack{MSE\\same} & $\rho$ & bias & CRPS & \shortstack{cov.\\raw / infl.} \\
+\midrule
+\endhead
+\bottomrule\endfoot
+\bottomrule\endlastfoot
+ORION & current-code seed 1 & 0.94 & 0.63 & 0.52 & -6\% & 0.0282 & 72 / 90 \\
+ & current-code seed 2 & 0.90 & 0.60 & 0.52 & -8\% & 0.0272 & 74 / 89 \\
+ & current-code seed 3 & 0.91 & 0.60 & 0.52 & -5\% & 0.0280 & 73 / 90 \\
+\addlinespace
+ORION & cell-level score only$^*$ & 1.33 & 1.22 & 0.45 & -15\% & 0.0360 & 52 / 89 \\
+ & no cell-level score & 0.92 & 0.62 & 0.53 & -5\% & 0.0280 & 73 / 90 \\
+ & bin contrasts not scored$^*$ & 1.29 & 0.84 & 0.43 & +8\% & 0.0353 & 57 / 90 \\
+ & no patient-level score$^*$ & 0.91 & 0.59 & 0.54 & -6\% & 0.0274 & 73 / 91 \\
+ & no region-level score$^*$ & 0.94 & 0.58 & 0.53 & -7\% & 0.0277 & 72 / 90 \\
+\addlinespace
+ORION & no spatial fields$^*$ & 1.00 & 0.62 & 0.50 & +2\% & 0.0282 & 82 / 89 \\
+ & no region or patient latent$^*$ & 1.02 & 0.68 & 0.46 & +1\% & 0.0327 & 45 / 88 \\
+ & no patient latent & 0.90 & 0.61 & 0.52 & -4\% & 0.0301 & 49 / 88 \\
+ & no region latent & 0.94 & 0.61 & 0.50 & +0\% & 0.0281 & 78 / 89 \\
+ & field rank 1 & 0.92 & 0.63 & 0.50 & -5\% & 0.0277 & 79 / 89 \\
+ & field rank 8$^*$ & 0.90 & 0.59 & 0.53 & -5\% & 0.0274 & 73 / 91 \\
+ & one field scale (20 um) & 0.92 & 0.63 & 0.52 & -6\% & 0.0277 & 78 / 90 \\
+ & coarse scales only (40, 80 um) & 0.93 & 0.61 & 0.50 & -5\% & 0.0279 & 76 / 90 \\
+ & fine scales only (10, 20 um) & 0.91 & 0.60 & 0.52 & -6\% & 0.0274 & 79 / 92 \\
+ & stationary loadings$^*$ & 0.92 & 0.67 & 0.51 & -15\% & 0.0320 & 39 / 88 \\
+\addlinespace
+ORION & width 64$^*$ & 0.86 & 0.59 & 0.54 & -1\% & 0.0274 & 75 / 91 \\
+ & no dropout$^*$ & 0.89 & 0.59 & 0.53 & -5\% & 0.0273 & 78 / 92 \\
+ & no morphology descriptors & 0.93 & 0.61 & 0.53 & -5\% & 0.0278 & 75 / 91 \\
+ & residual network does not see the stain$^*$ & 0.92 & 0.58 & 0.53 & -4\% & 0.0276 & 74 / 90 \\
+ & 1 transformer layer$^*$ & 0.88 & 0.62 & 0.51 & -7\% & 0.0276 & 74 / 90 \\
+\addlinespace
+ORION & 5 epochs$^*$ & 0.89 & 0.58 & 0.52 & -3\% & 0.0273 & 76 / 91 \\
+ & 4 samples per region in the score & 0.90 & 0.60 & 0.52 & -8\% & 0.0278 & 72 / 90 \\
+ & 12 training patients & 0.90 & 0.60 & 0.52 & -7\% & 0.0277 & 73 / 91 \\
+ & 6 training patients$^*$ & 0.90 & 0.63 & 0.50 & -8\% & 0.0283 & 73 / 90 \\
+\addlinespace
+lung & reference & 0.84 & 0.48 & 0.48 & -23\% & 0.0182 & 64 / 89 \\
+ & reference, seed 2 & 0.86 & 0.51 & 0.48 & -27\% & 0.0188 & 63 / 89 \\
+\addlinespace
+lung & cell-level score only$^*$ & 2.27 & 2.06 & 0.34 & -49\% & 0.0286 & 56 / 89 \\
+ & no patient-level score$^*$ & 0.83 & 0.51 & 0.49 & -30\% & 0.0188 & 60 / 89 \\
+ & no region-level score$^*$ & 0.86 & 0.51 & 0.46 & -22\% & 0.0186 & 65 / 89 \\
+\addlinespace
+lung & no spatial fields$^*$ & 0.94 & 0.58 & 0.47 & -24\% & 0.0187 & 81 / 90 \\
+ & no region or patient latent$^*$ & 0.86 & 0.50 & 0.48 & -20\% & 0.0192 & 47 / 89 \\
+ & stationary loadings$^*$ & 0.94 & 0.64 & 0.41 & -43\% & 0.0222 & 44 / 89 \\
+\addlinespace
+lung & residual network does not see the stain$^*$ & 0.86 & 0.52 & 0.47 & -25\% & 0.0189 & 61 / 89 \\
+\addlinespace
+lung & 6 training patients$^*$ & 0.85 & 0.53 & 0.49 & -25\% & 0.0187 & 62 / 89 \\
+\end{longtable}

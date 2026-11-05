@@ -1,0 +1,16 @@
+\begin{tabular}{@{}p{2.55in}cccccc@{}}
+\toprule
+ & \multicolumn{3}{c}{clustering (16)} & \multicolumn{3}{c}{all 136} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & cov. & width & score & cov. & width & score \\
+\midrule
+\method{} samples, raw & 45.6\% & 1.06 & 6.37 & 70.4\% & 1.75 & 4.85 \\
+\method{} + conformal & 90.0\% & 3.81 & 4.98 & 90.2\% & 3.59 & 4.86 \\
+\method{} center, constant scale + conformal & 90.9\% & 3.77 & 5.22 & 90.9\% & 3.95 & 5.64 \\
+plug-in, Gaussian (validation scale) & 74.7\% & 2.72 & 7.05 & 72.0\% & 2.39 & 6.78 \\
+plug-in + conformal & 91.1\% & 4.63 & 6.69 & 91.5\% & 4.09 & 5.89 \\
+global rescale + conformal & 92.3\% & 4.47 & 6.18 & 90.6\% & 4.88 & 7.13 \\
+family rescale + conformal & 91.7\% & 4.40 & 6.09 & 90.8\% & 4.92 & 7.13 \\
+rescale, \method{} scale + conformal & 92.3\% & 4.46 & 5.76 & 89.5\% & 4.17 & 5.67 \\
+\bottomrule
+\end{tabular}

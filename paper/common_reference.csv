@@ -1,0 +1,23 @@
+group,label,run,column,mse_all,mse_same,rho
+No stain,Direct ridge on region features,tessera_v3,direct,1.422164671424159,0.9898456154674542,0.3081434168414083
+No stain,"Direct graph model (same embeddings, transformer, CRPS)",tessera_v3,direct_graph,1.2965965801177217,0.914887628034565,0.3788971967773977
+No stain,\method{} around a constant stain,tessera_v3_const,joint,1.1317418536920865,0.7604344907784915,0.46221029687672455
+No stain,"\method{} around a constant stain, learned mean",tessera_v3_const_mc,joint,1.0045340075286115,0.7470892936732796,0.47660302394879156
+Transformer,plug-in,tessera_v3,plugin,1.0,1.0,0.520396479417283
+Transformer,global rescale,tessera_v3,global_rescale,0.8947301120733391,0.8275382009769763,0.5433161350844278
+Transformer,"direct graph with stain inputs (statistics, no cells)",tessera_v3,direct_graph_stain,0.8915933853964821,0.6312458047748034,0.533866295110915
+Transformer,same model trained by exact likelihood,tessera_v3_ml,joint,2.7477115222730397,4.4607547002431005,0.3489170621344223
+Transformer,\method{},tessera_v3,joint,0.8826578075465086,0.5994383196056179,0.531061692969871
+Ridge,plug-in,tessera_v3_ridge,plugin,1.3574644345192286,1.316227230090632,0.4160688665710187
+Ridge,\method{},tessera_v3_ridge,joint,1.1307609749511036,0.7830394843211144,0.42309899569583936
+U-Net,plug-in,tessera_v3_unet,plugin,1.069216217856408,0.9782371927568525,0.5061030791303388
+U-Net,\method{},tessera_v3_unet,joint,1.0932357101368388,0.7556485888385567,0.47155253283302073
+U-Net,"\method{}, learned mean correction",tessera_v3_unet_mc,joint,1.0254104367715646,0.7192095344380363,0.4802394879152412
+ROSIE,plug-in,tessera_v3_rosie,plugin,2.371198673247916,2.370790413274441,0.17948901887208923
+ROSIE,\method{},tessera_v3_rosie,joint,1.167339579800968,0.871091351159566,0.4620751020858625
+GigaTIME,plug-in,tessera_v3_gigatime,plugin,1.7957273664020614,1.855974270277779,0.2791937975940846
+GigaTIME,\method{},tessera_v3_gigatime,joint,1.1426572643807853,0.7910373812941787,0.43058851120185415
+GigaTIME,"\method{}, learned mean correction",tessera_v3_gigatime_mc,joint,1.092162052368378,0.7410276621018276,0.4430595408895266
+GigaTIME fine-tuned,plug-in,tessera_v3_gigatime_ft,plugin,1.1162810828161396,0.95041460311414,0.5050008277232094
+GigaTIME fine-tuned,\method{},tessera_v3_gigatime_ft,joint,1.050778518434474,0.7431010252123071,0.5075667696722217
+GigaTIME fine-tuned,"\method{}, learned mean correction",tessera_v3_gigatime_ft_mc,joint,1.0569428369438307,0.7201898003253305,0.5141388919545304

@@ -1,0 +1,14 @@
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+ & \multicolumn{4}{c}{total variation to measured} & & & \multicolumn{2}{c}{rank corr.} \\
+\cmidrule(lr){2-5}\cmidrule(lr){8-9}
+Virtual stain & plug-in & quant. & \method{} & \method{}-Q & $p$ & better & quant. & \method{}-Q \\
+\midrule
+Cell-graph transformer & 0.42 & 0.34 & 0.36 & 0.29 & 0.005 & 26/40 & 0.52 & 0.57 \\
+Per-cell ridge & 0.54 & 0.33 & 0.42 & 0.29 & 0.006 & 27/40 & 0.54 & 0.54 \\
+Pixel U-Net & 0.44 & 0.34 & 0.36 & 0.28 & 0.002 & 30/40 & 0.54 & 0.55 \\
+ROSIE & 0.72 & 0.54 & 0.46 & 0.36 & $4.6{\times}10^{-10}$ & 36/40 & 0.18 & 0.36 \\
+GigaTIME & 0.69 & 0.40 & 0.44 & 0.32 & $3.8{\times}10^{-5}$ & 32/40 & 0.37 & 0.43 \\
+GigaTIME fine-tuned & 0.49 & 0.36 & 0.42 & 0.29 & $5.7{\times}10^{-4}$ & 29/40 & 0.51 & 0.51 \\
+\bottomrule
+\end{tabular}

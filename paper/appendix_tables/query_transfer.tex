@@ -1,0 +1,18 @@
+
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Method & Moran $I$ & Geary $C$ & Log-assay contrast \\
+\midrule
+Plug-in & 1.000 & 1.000 & 1.000 \\
+No-image training mean$^\dagger$ & 0.423 & 0.515 & 2.805 \\
+Plug-in + constant$^\dagger$ & 0.315 & 0.377 & 1.376 \\
+Selection affine & 0.318 & 0.403 & 1.526 \\
+Frozen-feature ridge (adapted) & 0.207 & 0.285 & 0.954 \\
+Direct graph (adapted) & 0.272 & 0.351 & 0.984 \\
+Frozen direct-moment reuse & 8.334 & 10.070 & 0.966 \\
+Independent Gaussian cells & 2.245 & 3.159 & 1.000 \\
+Exact independent cell marginals & 2.245 & 3.161 & 1.005 \\
+\method{} moment ratios & 0.559 & 0.526 & 0.956 \\
+\method{} joint samples & 0.427 & 0.459 & 0.981 \\
+\bottomrule
+\end{tabular}

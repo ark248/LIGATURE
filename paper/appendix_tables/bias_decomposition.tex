@@ -1,0 +1,16 @@
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & plug-in & \multicolumn{3}{c}{cohort mean / measured} & \multicolumn{2}{c}{per-patient RMS / s.d.} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-7}
+Virtual stain & bias & $G(r)$ & $X(f,r)$ & $X<0$ & $G(r)$ & $X(f,r)$ \\
+\midrule
+Cell-graph transformer & $-34\%$ & $+31\%$ & $+3\%$ & 39\% & 0.47 & 0.64 \\
+Per-cell ridge & $-39\%$ & $+42\%$ & $-2\%$ & 61\% & 0.60 & 0.65 \\
+Pixel U-Net & $-12\%$ & $+34\%$ & $-19\%$ & 93\% & 0.53 & 0.70 \\
+ROSIE & $-94\%$ & $+90\%$ & $-2\%$ & 54\% & 1.09 & 0.34 \\
+GigaTIME & $-59\%$ & $+71\%$ & $-14\%$ & 84\% & 0.89 & 0.60 \\
+GigaTIME fine-tuned & $-7\%$ & $+36\%$ & $-25\%$ & 88\% & 0.56 & 0.75 \\
+\midrule
+Lung (Xenium), transformer & $-71\%$ & $+64\%$ & $+4\%$ & 32\% & 0.74 & 0.57 \\
+\bottomrule
+\end{tabular}

@@ -51,8 +51,8 @@ For two cells' molecular measurements, the central distinction is:
 
 $$
 \mathbb{E}[Y_iY_j\mid H]
-=\mathbb{E}[Y_i\mid H]\,\mathbb{E}[Y_j\mid H]
-+\operatorname{Cov}(Y_i,Y_j\mid H).
+=\mathbb{E}[Y_i\mid H]\cdot\mathbb{E}[Y_j\mid H]
++\mathrm{Cov}(Y_i,Y_j\mid H).
 $$
 
 Per-cell conditional means supply the product term; spatial inference also needs

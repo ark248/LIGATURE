@@ -2,6 +2,7 @@
   "patients": 39,
   "events": 24,
   "replicates": 2000,
+  "scope": "Post hoc, fixed-forecast sensitivities in a development cohort. The historical oracle key denotes measured-feature comparisons, not a general clinical bound. Inconclusive comparisons do not establish equivalence or impossibility. Event-count estimates assume inverse-square-root event scaling and are planning illustrations; Cox tests describe in-sample associations, not out-of-sample prediction or clinical utility.",
   "oracle": [
     {
       "feature": "conditional",
@@ -2067,6 +2068,6 @@
     },
     "survival_superiority_established": false
   },
-  "script_sha256": "3543743936d56e23cc5934fb67d38c59ada61c28df2d474e2a8873670ba7378b",
+  "script_sha256": "0d366f35159db4e279b1d3c7c9f0bb3cda390c1ee9aa10cf1b1a98456d7f1a23",
   "clinical_source_sha256": "dcf244f0d5a779ac33f11de7b6f93bc544e655a51a8057bb6decda9019d673d3"
 }

@@ -121,10 +121,16 @@ The included `paper/biological_case.json` regenerates the case tables and numeri
 macros without patient data. Confidence intervals condition on the fitted models;
 they do not capture all development or training uncertainty.
 
-`clinical_feasibility.py` asks what this 39-patient, 24-event cohort can decide. The
-measured assay itself does not separate from the direct model (burden difference
+`clinical_feasibility.py` supplies exploratory sensitivities in 39 patients with
+24 events. Measured burden does not separate from the direct model (difference
 +0.048, 95% interval -0.129 to 0.229), and none of 48 LIGATURE-minus-direct contrasts
-excludes zero. The cohort therefore cannot support a survival claim in either direction.
+excludes zero. These results do not establish survival superiority or its
+impossibility. The event-count approximation assumes standard errors scale with
+the inverse square root of events; it is a planning illustration, not a formal
+sample-size calculation or an explanation of the null comparison. Stage-adjusted
+Cox tests describe in-sample associations, not externally validated prediction.
+Pathology sensitivities, including the contrast favoring the direct model, remain
+in the aggregate output and appendix.
 It takes the same inputs as the case above, with a required clinical table:
 
 ```bash

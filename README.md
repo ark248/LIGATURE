@@ -74,6 +74,11 @@ The fixed-model mask-distance sensitivity is in
 The final exploratory no-image, additive-correction and ridge comparisons are in
 [research/simple_baselines](research/simple_baselines/README.md).
 
+The [CD8a–epithelial proximity case](release/ligature/README.md#cd8aepithelial-proximity-case)
+includes portable replay commands and aggregate-only outputs. It illustrates
+assay-feature reconstruction; exploratory survival and pathology analyses do not
+establish clinical superiority over direct prediction.
+
 The code uses one model source tree: `release/ligature/src/`. Experiment preparation
 creates source snapshots and fitted outputs in the chosen data workspace. Raw
 data, pretrained/fitted weights and patient-level prediction files are downloaded
@@ -84,7 +89,9 @@ or generated locally. Only aggregate benchmark summaries are included here.
 From `paper/`, use a LaTeX installation with the packages declared in `main.tex`:
 
 ```bash
+python -m pip install pypdf
 tectonic main.tex
+python split_submission.py
 ```
 
 This builds the combined manuscript, bibliography and appendix. The submission
@@ -96,6 +103,9 @@ patient data:
 python research/simple_baselines/render_numbers.py
 python research/query_bench_20261104/render_tables.py
 python research/query_bench_20261104/render_figures.py
+python release/ligature/src/render_biological_case.py \
+  --summary paper/biological_case.json \
+  --feasibility paper/clinical_feasibility.json --paper-dir paper
 ```
 
 The tissue overview is supplied as a final figure export; its original image

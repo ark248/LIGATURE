@@ -1,21 +1,24 @@
-"""Can the ORION cohort establish a survival advantage for LIGATURE over the direct graph?
+"""Exploratory clinical sensitivities for frozen ORION forecasts.
 
 Post hoc and exploratory. No model is fitted to images and no outcome enters any generator.
 This grid was fixed before any result below was computed, but after the fraction and burden
 concordances in biological_case.json had been seen, so it is not a preregistration.
 
 Analyses:
-  1. Oracle: measured assay minus direct graph. Reproducing the assay exactly is the most any
-     image model can do with these features, so an unseparated oracle bounds what is decidable.
+  1. Measured feature minus direct graph (stored under the historical key "oracle").
+     Exact reconstruction reproduces this feature's observed association; it is not a general
+     upper bound on clinical information or proof that superiority is impossible.
   2. Full grid: LIGATURE or LIGATURE-Q minus direct, over three features, four pair scopes and
      two run aggregations (48 contrasts), with unadjusted and family-wise (max-|t|) intervals.
      No contrast is selected. Fold-rank scope adds the 444 between-fold pairs that the within-fold
      scope discards, and removes between-fold scale differences by ranking within each fold.
-  3. Power: minimum detectable difference and the events needed, assuming SE scales as 1/sqrt(events).
+  3. Planning illustration: approximate detectable differences and event counts, assuming
+     SE scales as 1/sqrt(events). This is not a formal sample-size calculation or a diagnosis
+     that low power caused the inconclusive comparison.
   4. Nested Cox: does either predictor add to the other given stage? Ensembled predictions,
      z-scored within fold; likelihood-ratio tests with Holm adjustment.
   5. Assay recovery: paired MSE ratio and Spearman difference on all 40 patients (no outcomes).
-  6. One independent endpoint, never evaluated before this script: pathologist TIL grade.
+  6. A further post hoc endpoint in the same patients: pathologist TIL grade.
      Primary: engaged burden, within-fold concordance, LIGATURE-Q minus direct. Direction fixed
      (higher burden with higher grade). Other features and the pooled scope are secondary.
 
@@ -23,6 +26,7 @@ Decision rule for survival, adding multiplicity to the earlier fixed rule: super
 established only if the measured primary interval excludes 0.5 in the expected direction and the
 LIGATURE-Q minus direct primary interval (within-fold burden) excludes zero in the favorable
 direction after family-wise adjustment. A single unadjusted grid cell does not meet it.
+Failure of this exploratory rule does not demonstrate equivalence or impossibility.
 """
 import argparse
 import hashlib
@@ -185,7 +189,12 @@ def analyze(cases, meta, predictions, labels):
         weights += np.eye(n)[rng.choice(ids, (2000, len(ids)), replace=True)].sum(1)
     panel = Panel(time, event, fold, stage, weights)
     values = {name: v[:, ix] for name, v in predictions.items()}
-    out = dict(patients=n, events=int(event.sum()), replicates=len(weights))
+    out = dict(patients=n, events=int(event.sum()), replicates=len(weights),
+               scope="Post hoc, fixed-forecast sensitivities in a development cohort. "
+               "The historical oracle key denotes measured-feature comparisons, not a general clinical bound. "
+               "Inconclusive comparisons do not establish equivalence or impossibility. "
+               "Event-count estimates assume inverse-square-root event scaling and are planning illustrations; "
+               "Cox tests describe in-sample associations, not out-of-sample prediction or clinical utility.")
 
     # 1. Oracle.
     out["oracle"] = []

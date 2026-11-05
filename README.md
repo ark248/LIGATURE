@@ -42,6 +42,16 @@ The synthetic example exercises joint draws, shared patient latents, analytic
 bilinear means and differentiable spatial scoring. It needs no downloads, patient
 data or fitted checkpoints. It is an execution example, not a trained result.
 
+Additional data-free checks exercise conformal ranks, analytic moments, the
+complete-fold evaluator and the independent-cell marginal control:
+
+```bash
+python research/calibration/test_numerics.py
+python research/query_bench_20261104/check_analytic.py
+python research/query_bench_20261104/check_evaluation.py
+python research/query_bench_20261104/check_marginal.py
+```
+
 For a platform-specific PyTorch build, install the appropriate torch/torchvision
 packages before the remaining requirements. Feature extraction benefits from a
 GPU; model fitting and statistical evaluation support CPU execution. Dependency
@@ -104,5 +114,10 @@ Cancer* (2023), with the crop release provided by csmp-hub. HEST-1k access requi
 accepting its dataset terms. Phikon-v2 has its own model license. No rights to
 third-party datasets or model weights are granted by this repository's MIT license.
 
-Please cite the manuscript using its title and author information; machine-readable
+## Author and citation
+
+[Adhiban Arulselvan](https://github.com/ark248), Massachusetts Institute of
+Technology, Computer Science and Artificial Intelligence Laboratory (CSAIL).
+
+Please cite the manuscript using its title and author information. Machine-readable
 software citation metadata is in [CITATION.cff](CITATION.cff).

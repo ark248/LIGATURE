@@ -121,6 +121,23 @@ The included `paper/biological_case.json` regenerates the case tables and numeri
 macros without patient data. Confidence intervals condition on the fitted models;
 they do not capture all development or training uncertainty.
 
+`clinical_feasibility.py` asks what this 39-patient, 24-event cohort can decide. The
+measured assay itself does not separate from the direct model (burden difference
++0.048, 95% interval -0.129 to 0.229), and none of 48 LIGATURE-minus-direct contrasts
+excludes zero. The cohort therefore cannot support a survival claim in either direction.
+It takes the same inputs as the case above, with a required clinical table:
+
+```bash
+python release/ligature/src/clinical_feasibility.py \
+  --generator-runs outputs/reference outputs/seed1 outputs/seed2 outputs/seed3 \
+  --direct-dir outputs/reference \
+  --clinical-table /path/to/published_supplementary_tables.xlsx \
+  --output paper/clinical_feasibility.json
+python release/ligature/src/render_biological_case.py \
+  --summary paper/biological_case.json \
+  --feasibility paper/clinical_feasibility.json --paper-dir paper
+```
+
 ## Lung Xenium cohort
 
 Obtain access to HEST-1k and accept its terms before downloading:

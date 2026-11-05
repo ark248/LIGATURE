@@ -1,0 +1,2072 @@
+{
+  "patients": 39,
+  "events": 24,
+  "replicates": 2000,
+  "oracle": [
+    {
+      "feature": "conditional",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5918367346938775,
+      "b": 0.5170068027210885,
+      "difference": 0.07482993197278909,
+      "se": 0.09591412549198225,
+      "ci95": [
+        -0.11111111111111105,
+        0.2601802757158005
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "conditional",
+      "scope": "within_fold",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5918367346938775,
+      "b": 0.5102040816326531,
+      "difference": 0.08163265306122447,
+      "se": 0.0946304308455361,
+      "ci95": [
+        -0.10147714604236344,
+        0.26142295204795174
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "conditional",
+      "scope": "pooled",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5479704797047971,
+      "b": 0.5209102091020911,
+      "difference": 0.027060270602705994,
+      "se": 0.06361737771228344,
+      "ci95": [
+        -0.10171394588165329,
+        0.14872336237951442
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "scope": "pooled",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5479704797047971,
+      "b": 0.522140221402214,
+      "difference": 0.02583025830258301,
+      "se": 0.06506154148914034,
+      "ci95": [
+        -0.1065637925308698,
+        0.14831560818950493
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5885608856088561,
+      "b": 0.5089175891758918,
+      "difference": 0.0796432964329643,
+      "se": 0.0711363031859731,
+      "ci95": [
+        -0.06574333671832452,
+        0.215139738724289
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5885608856088561,
+      "b": 0.5055350553505535,
+      "difference": 0.08302583025830257,
+      "se": 0.07012277869500344,
+      "ci95": [
+        -0.057462865842363556,
+        0.2191553526260973
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "conditional",
+      "scope": "within_fold_and_stage",
+      "aggregate": "mean_of_metrics",
+      "a": 0.53125,
+      "b": 0.53125,
+      "difference": 0.0,
+      "se": 0.18325783751219604,
+      "ci95": [
+        -0.34960365853658526,
+        0.36366003787878776
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "conditional",
+      "scope": "within_fold_and_stage",
+      "aggregate": "ensemble_prediction",
+      "a": 0.53125,
+      "b": 0.53125,
+      "difference": 0.0,
+      "se": 0.17744900261830235,
+      "ci95": [
+        -0.33333333333333337,
+        0.3555952380952379
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "abundance",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.6326530612244898,
+      "b": 0.5986394557823129,
+      "difference": 0.03401360544217691,
+      "se": 0.08614237553533985,
+      "ci95": [
+        -0.13058535339463173,
+        0.21074146025578758
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "abundance",
+      "scope": "within_fold",
+      "aggregate": "ensemble_prediction",
+      "a": 0.6326530612244898,
+      "b": 0.6020408163265306,
+      "difference": 0.030612244897959218,
+      "se": 0.08944818651488481,
+      "ci95": [
+        -0.13832143819014267,
+        0.2090130334244269
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "abundance",
+      "scope": "pooled",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5996309963099631,
+      "b": 0.5811808118081182,
+      "difference": 0.01845018450184488,
+      "se": 0.04578633368870993,
+      "ci95": [
+        -0.07097926267281102,
+        0.10718035489609089
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "scope": "pooled",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5996309963099631,
+      "b": 0.5738007380073801,
+      "difference": 0.02583025830258301,
+      "se": 0.04562979609351442,
+      "ci95": [
+        -0.06279470529470522,
+        0.11906785075389713
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "mean_of_metrics",
+      "a": 0.6070110701107011,
+      "b": 0.5944034440344403,
+      "difference": 0.012607626076260758,
+      "se": 0.05395428354563103,
+      "ci95": [
+        -0.09353762338268623,
+        0.11679837317632591
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "ensemble_prediction",
+      "a": 0.6070110701107011,
+      "b": 0.6033210332103321,
+      "difference": 0.0036900369003689537,
+      "se": 0.05165305297732896,
+      "ci95": [
+        -0.0967073828789852,
+        0.10283466075713132
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "abundance",
+      "scope": "within_fold_and_stage",
+      "aggregate": "mean_of_metrics",
+      "a": 0.46875,
+      "b": 0.625,
+      "difference": -0.15625,
+      "se": 0.14967634710288988,
+      "ci95": [
+        -0.42666666666666664,
+        0.16666666666666663
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "abundance",
+      "scope": "within_fold_and_stage",
+      "aggregate": "ensemble_prediction",
+      "a": 0.46875,
+      "b": 0.625,
+      "difference": -0.15625,
+      "se": 0.15397679005022455,
+      "ci95": [
+        -0.4390487804878049,
+        0.1667857142857137
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "engaged_burden",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.6122448979591837,
+      "b": 0.564625850340136,
+      "difference": 0.04761904761904767,
+      "se": 0.09298723942864441,
+      "ci95": [
+        -0.12921465355805242,
+        0.22939184471442536
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "engaged_burden",
+      "scope": "within_fold",
+      "aggregate": "ensemble_prediction",
+      "a": 0.6122448979591837,
+      "b": 0.5918367346938775,
+      "difference": 0.020408163265306145,
+      "se": 0.09577992617305373,
+      "ci95": [
+        -0.16666666666666669,
+        0.20930232558139533
+      ],
+      "comparable_pairs": 98
+    },
+    {
+      "feature": "engaged_burden",
+      "scope": "pooled",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5719557195571956,
+      "b": 0.5455104551045511,
+      "difference": 0.0264452644526445,
+      "se": 0.06565081086359847,
+      "ci95": [
+        -0.10675357374918781,
+        0.1505386137062499
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "scope": "pooled",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5719557195571956,
+      "b": 0.5553505535055351,
+      "difference": 0.016605166051660514,
+      "se": 0.06588787236851643,
+      "ci95": [
+        -0.1142042248770376,
+        0.14206254766000456
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "mean_of_metrics",
+      "a": 0.6107011070110702,
+      "b": 0.5608856088560885,
+      "difference": 0.04981549815498165,
+      "se": 0.07063209739399447,
+      "ci95": [
+        -0.08974964985994399,
+        0.18270137600494735
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "ensemble_prediction",
+      "a": 0.6107011070110702,
+      "b": 0.5747232472324724,
+      "difference": 0.0359778597785978,
+      "se": 0.07099653973016658,
+      "ci95": [
+        -0.1036759373583608,
+        0.17407721280602642
+      ],
+      "comparable_pairs": 542
+    },
+    {
+      "feature": "engaged_burden",
+      "scope": "within_fold_and_stage",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5,
+      "b": 0.5625,
+      "difference": -0.0625,
+      "se": 0.13427564530358388,
+      "ci95": [
+        -0.3333333333333333,
+        0.1975405092592592
+      ],
+      "comparable_pairs": 32
+    },
+    {
+      "feature": "engaged_burden",
+      "scope": "within_fold_and_stage",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5,
+      "b": 0.59375,
+      "difference": -0.09375,
+      "se": 0.1419538994012371,
+      "ci95": [
+        -0.3824715370018975,
+        0.17857142857142855
+      ],
+      "comparable_pairs": 32
+    }
+  ],
+  "grid": [
+    {
+      "method": "ligature_q",
+      "feature": "conditional",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5510204081632653,
+      "b": 0.5170068027210885,
+      "difference": 0.0340136054421768,
+      "se": 0.06499267117914119,
+      "ci95": [
+        -0.09543287566742949,
+        0.16089180038693515
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.18605757883062804,
+        0.2540847897149816
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "conditional",
+      "scope": "within_fold",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5510204081632653,
+      "b": 0.5102040816326531,
+      "difference": 0.04081632653061218,
+      "se": 0.07230146260296857,
+      "ci95": [
+        -0.10718167701863354,
+        0.18672972972972937
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.2040031001988103,
+        0.28563575326003465
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "conditional",
+      "scope": "pooled",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5249077490774908,
+      "b": 0.5209102091020911,
+      "difference": 0.003997539975399755,
+      "se": 0.03294602864556498,
+      "ci95": [
+        -0.05932765982737174,
+        0.06548358657578335
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.10756075436105783,
+        0.11555583431185734
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "conditional",
+      "scope": "pooled",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5239852398523985,
+      "b": 0.522140221402214,
+      "difference": 0.0018450184501844769,
+      "se": 0.03965910712377508,
+      "ci95": [
+        -0.07609353493644234,
+        0.07770287542143363
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.13244437931705685,
+        0.1361344162174258
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "conditional",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5495848708487084,
+      "b": 0.5089175891758918,
+      "difference": 0.040667281672816635,
+      "se": 0.03933245700992887,
+      "ci95": [
+        -0.039486763855401195,
+        0.11606663728833813
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.0925160486549308,
+        0.17385061200056406
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "conditional",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5470479704797048,
+      "b": 0.5055350553505535,
+      "difference": 0.04151291512915123,
+      "se": 0.044316083286678534,
+      "ci95": [
+        -0.04593327558891907,
+        0.12351378983122333
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.1085454338245326,
+        0.19157126408283506
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "conditional",
+      "scope": "within_fold_and_stage",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5390625,
+      "b": 0.53125,
+      "difference": 0.0078125,
+      "se": 0.11939956269783511,
+      "ci95": [
+        -0.22502016129032257,
+        0.2501096491228065
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.39648544141159653,
+        0.41211044141159653
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "conditional",
+      "scope": "within_fold_and_stage",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5625,
+      "b": 0.53125,
+      "difference": 0.03125,
+      "se": 0.14659738201974618,
+      "ci95": [
+        -0.25000000000000006,
+        0.33333333333333337
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.4651422683444419,
+        0.527642268344442
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "abundance",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5331632653061225,
+      "b": 0.5986394557823129,
+      "difference": -0.06547619047619047,
+      "se": 0.04730831611035756,
+      "ci95": [
+        -0.16666666666666663,
+        0.019054520358868135
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.2256665159924616,
+        0.09471413504008067
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "abundance",
+      "scope": "within_fold",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5306122448979592,
+      "b": 0.6020408163265306,
+      "difference": -0.0714285714285714,
+      "se": 0.053496344380967904,
+      "ci95": [
+        -0.18521241830065358,
+        0.02667567567567569
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.2525721319038001,
+        0.1097149890466573
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "abundance",
+      "scope": "pooled",
+      "aggregate": "mean_of_metrics",
+      "a": 0.540590405904059,
+      "b": 0.5811808118081182,
+      "difference": -0.04059040590405916,
+      "se": 0.031623197352269955,
+      "ci95": [
+        -0.09968291293415048,
+        0.02444618155966847
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.14766947136706196,
+        0.06648865955894365
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "abundance",
+      "scope": "pooled",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5350553505535055,
+      "b": 0.5738007380073801,
+      "difference": -0.03874538745387457,
+      "se": 0.030091404400510204,
+      "ci95": [
+        -0.09506714983606745,
+        0.02297051284900479
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.14063766057800986,
+        0.06314688567026074
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "abundance",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5355166051660517,
+      "b": 0.5944034440344403,
+      "difference": -0.058886838868388636,
+      "se": 0.034201689301650635,
+      "ci95": [
+        -0.12965067107924252,
+        0.0049820993139361265
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.17469691609999555,
+        0.05692323836321829
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "abundance",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5387453874538746,
+      "b": 0.6033210332103321,
+      "difference": -0.06457564575645758,
+      "se": 0.03617875136180041,
+      "ci95": [
+        -0.13699199726596986,
+        0.006250670655546931
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.18708023763201148,
+        0.05792894611909634
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "abundance",
+      "scope": "within_fold_and_stage",
+      "aggregate": "mean_of_metrics",
+      "a": 0.515625,
+      "b": 0.625,
+      "difference": -0.109375,
+      "se": 0.06973684166174894,
+      "ci95": [
+        -0.26475490196078433,
+        0.0
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.34551038347492424,
+        0.12676038347492427
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "abundance",
+      "scope": "within_fold_and_stage",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5,
+      "b": 0.625,
+      "difference": -0.125,
+      "se": 0.08366802085647412,
+      "ci95": [
+        -0.3170731707317074,
+        0.0
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.4083076422554464,
+        0.1583076422554464
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "engaged_burden",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5510204081632653,
+      "b": 0.564625850340136,
+      "difference": -0.013605442176870763,
+      "se": 0.05046662596352544,
+      "ci95": [
+        -0.1131293029259897,
+        0.08982040229885058
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.18449009640862626,
+        0.15727921205488474
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "engaged_burden",
+      "scope": "within_fold",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5204081632653061,
+      "b": 0.5918367346938775,
+      "difference": -0.0714285714285714,
+      "se": 0.06251875077106032,
+      "ci95": [
+        -0.20005050505050512,
+        0.04707282913165264
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.28312283282491274,
+        0.14026568996776995
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "engaged_burden",
+      "scope": "pooled",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5355166051660516,
+      "b": 0.5455104551045511,
+      "difference": -0.0099938499384995,
+      "se": 0.03066167998880635,
+      "ci95": [
+        -0.06610653029479004,
+        0.05355096724508453
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.1138171288483838,
+        0.0938294289713848
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "engaged_burden",
+      "scope": "pooled",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5295202952029521,
+      "b": 0.5553505535055351,
+      "difference": -0.02583025830258301,
+      "se": 0.033506648437108065,
+      "ci95": [
+        -0.08779758731512649,
+        0.04495444022004624
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.13928686300562937,
+        0.08762634640046336
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "engaged_burden",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5523523985239852,
+      "b": 0.5608856088560885,
+      "difference": -0.008533210332103303,
+      "se": 0.037453216071670375,
+      "ci95": [
+        -0.08541348050131238,
+        0.06382104796408432
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.13535325736477646,
+        0.11828683670056986
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "engaged_burden",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5369003690036901,
+      "b": 0.5747232472324724,
+      "difference": -0.037822878228782275,
+      "se": 0.03717315216803827,
+      "ci95": [
+        -0.11259815730196465,
+        0.032348799492410506
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.16369460303025343,
+        0.08804884657268888
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "engaged_burden",
+      "scope": "within_fold_and_stage",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5234375,
+      "b": 0.5625,
+      "difference": -0.0390625,
+      "se": 0.0723346814124879,
+      "ci95": [
+        -0.18753472222222234,
+        0.09421525032938073
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.2839944086849787,
+        0.2058694086849787
+      ]
+    },
+    {
+      "method": "ligature_q",
+      "feature": "engaged_burden",
+      "scope": "within_fold_and_stage",
+      "aggregate": "ensemble_prediction",
+      "a": 0.4375,
+      "b": 0.59375,
+      "difference": -0.15625,
+      "se": 0.10444447338208024,
+      "ci95": [
+        -0.391304347826087,
+        0.0
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.5099086284411825,
+        0.1974086284411824
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "conditional",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.528061224489796,
+      "b": 0.5170068027210885,
+      "difference": 0.011054421768707523,
+      "se": 0.0759731284682339,
+      "ci95": [
+        -0.14281539351851852,
+        0.15140006385696014
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.24619760452252987,
+        0.2683064480599449
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "conditional",
+      "scope": "within_fold",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5,
+      "b": 0.5102040816326531,
+      "difference": -0.010204081632653073,
+      "se": 0.0850671279560793,
+      "ci95": [
+        -0.1852430555555556,
+        0.15117159971811128
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.2982492296829593,
+        0.27784106641765316
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "conditional",
+      "scope": "pooled",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5142988929889298,
+      "b": 0.5209102091020911,
+      "difference": -0.006611316113161236,
+      "se": 0.050083580829441005,
+      "ci95": [
+        -0.11137895565845352,
+        0.0845485307525072
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.17619894416090984,
+        0.16297631193458736
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "conditional",
+      "scope": "pooled",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5092250922509225,
+      "b": 0.522140221402214,
+      "difference": -0.01291512915129156,
+      "se": 0.05279908398575626,
+      "ci95": [
+        -0.12548567145037617,
+        0.08462224108658732
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.19169770156222296,
+        0.16586744325963984
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "conditional",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5299815498154982,
+      "b": 0.5089175891758918,
+      "difference": 0.02106396063960636,
+      "se": 0.04549247462915535,
+      "ci95": [
+        -0.07116891676902136,
+        0.10452264208507678
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.13297775799576914,
+        0.17510567927498186
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "conditional",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5101476014760148,
+      "b": 0.5055350553505535,
+      "difference": 0.004612546125461248,
+      "se": 0.048568972551336916,
+      "ci95": [
+        -0.09600221125811444,
+        0.09347889740691595
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.15984647847478453,
+        0.16907157072570703
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "conditional",
+      "scope": "within_fold_and_stage",
+      "aggregate": "mean_of_metrics",
+      "a": 0.546875,
+      "b": 0.53125,
+      "difference": 0.015625,
+      "se": 0.14416358240686264,
+      "ci95": [
+        -0.26668103448275865,
+        0.30555555555555547
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.47252619818418246,
+        0.5037761981841824
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "conditional",
+      "scope": "within_fold_and_stage",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5,
+      "b": 0.53125,
+      "difference": -0.03125,
+      "se": 0.17396829338716382,
+      "ci95": [
+        -0.3846774193548388,
+        0.3043478260869565
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.6203227009219966,
+        0.5578227009219966
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "abundance",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5637755102040816,
+      "b": 0.5986394557823129,
+      "difference": -0.03486394557823136,
+      "se": 0.06239124425602599,
+      "ci95": [
+        -0.1609330100574713,
+        0.09169354838709658
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.24612645814417367,
+        0.17639856698771095
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "abundance",
+      "scope": "within_fold",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5612244897959183,
+      "b": 0.6020408163265306,
+      "difference": -0.04081632653061229,
+      "se": 0.06682675325769524,
+      "ci95": [
+        -0.16867861054608047,
+        0.09862676056338007
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.26709788203078805,
+        0.18546522896956347
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "abundance",
+      "scope": "pooled",
+      "aggregate": "mean_of_metrics",
+      "a": 0.558579335793358,
+      "b": 0.5811808118081182,
+      "difference": -0.022601476014760258,
+      "se": 0.03424229634700788,
+      "ci95": [
+        -0.09044488333748496,
+        0.04302244039270677
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.13854905245049987,
+        0.09334610042097934
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "abundance",
+      "scope": "pooled",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5608856088560885,
+      "b": 0.5738007380073801,
+      "difference": -0.01291512915129156,
+      "se": 0.0332399946177546,
+      "ci95": [
+        -0.07937074829931978,
+        0.05051006567675601
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.1254688194064268,
+        0.09963856110384368
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "abundance",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5678044280442804,
+      "b": 0.5944034440344403,
+      "difference": -0.026599015990159902,
+      "se": 0.03621525606555397,
+      "ci95": [
+        -0.09800323849960384,
+        0.04473768302244584
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.14922721616247747,
+        0.09602918418215768
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "abundance",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5673431734317343,
+      "b": 0.6033210332103321,
+      "difference": -0.0359778597785978,
+      "se": 0.03739754909487363,
+      "ci95": [
+        -0.1113093416681238,
+        0.038983905139420384
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.1626094132890586,
+        0.090653693731863
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "abundance",
+      "scope": "within_fold_and_stage",
+      "aggregate": "mean_of_metrics",
+      "a": 0.546875,
+      "b": 0.625,
+      "difference": -0.078125,
+      "se": 0.09972435292892003,
+      "ci95": [
+        -0.2778645833333333,
+        0.12070271682340637
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.41580086485889967,
+        0.25955086485889967
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "abundance",
+      "scope": "within_fold_and_stage",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5625,
+      "b": 0.625,
+      "difference": -0.0625,
+      "se": 0.11020953617361781,
+      "ci95": [
+        -0.29999999999999993,
+        0.16666666666666663
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.4356796632428408,
+        0.3106796632428408
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "engaged_burden",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5459183673469388,
+      "b": 0.564625850340136,
+      "difference": -0.018707482993197244,
+      "se": 0.06995745660018403,
+      "ci95": [
+        -0.1601331453634086,
+        0.11256372465254036
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.25558988901526164,
+        0.21817492302886715
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "engaged_burden",
+      "scope": "within_fold",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5408163265306123,
+      "b": 0.5918367346938775,
+      "difference": -0.05102040816326525,
+      "se": 0.07083015140750057,
+      "ci95": [
+        -0.20000000000000007,
+        0.08139534883720934
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.2908578393638688,
+        0.1888170230373383
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "engaged_burden",
+      "scope": "pooled",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5262915129151292,
+      "b": 0.5455104551045511,
+      "difference": -0.019218942189421884,
+      "se": 0.05123671094384518,
+      "ci95": [
+        -0.12662650290215585,
+        0.07743038712644659
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.1927111752532974,
+        0.15427329087445363
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "engaged_burden",
+      "scope": "pooled",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5239852398523985,
+      "b": 0.5553505535055351,
+      "difference": -0.03136531365313655,
+      "se": 0.05263113183841286,
+      "ci95": [
+        -0.1394275663421276,
+        0.06454099073901404
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.20957918458901786,
+        0.14684855728274476
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "engaged_burden",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5412822878228782,
+      "b": 0.5608856088560885,
+      "difference": -0.019603321033210275,
+      "se": 0.04835391170341759,
+      "ci95": [
+        -0.11646969978151359,
+        0.07331417997295683
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.18333412974951638,
+        0.14412748768309583
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "engaged_burden",
+      "scope": "pooled_fold_ranks",
+      "aggregate": "ensemble_prediction",
+      "a": 0.533210332103321,
+      "b": 0.5747232472324724,
+      "difference": -0.04151291512915134,
+      "se": 0.04520486701174463,
+      "ci95": [
+        -0.13434558479380104,
+        0.04530897278249848
+      ],
+      "comparable_pairs": 542,
+      "ci95_familywise": [
+        -0.19458076782208852,
+        0.11155493756378584
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "engaged_burden",
+      "scope": "within_fold_and_stage",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5078125,
+      "b": 0.5625,
+      "difference": -0.0546875,
+      "se": 0.13387138594750517,
+      "ci95": [
+        -0.3276202359346642,
+        0.20840773809523772
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.5079883708705683,
+        0.39861337087056825
+      ]
+    },
+    {
+      "method": "ligature",
+      "feature": "engaged_burden",
+      "scope": "within_fold_and_stage",
+      "aggregate": "ensemble_prediction",
+      "a": 0.5,
+      "b": 0.59375,
+      "difference": -0.09375,
+      "se": 0.12899107765966325,
+      "ci95": [
+        -0.359,
+        0.1601666666666658
+      ],
+      "comparable_pairs": 32,
+      "ci95_familywise": [
+        -0.5305256964926539,
+        0.34302569649265396
+      ]
+    }
+  ],
+  "grid_summary": {
+    "contrasts": 48,
+    "familywise_critical_t": 3.3860923128734965,
+    "favor_ligature_point": 12,
+    "favor_direct_point": 36,
+    "unadjusted_favor_ligature": 0,
+    "unadjusted_favor_direct": 0,
+    "familywise_favor_ligature": 0,
+    "familywise_favor_direct": 0
+  },
+  "power": [
+    {
+      "scope": "within_fold",
+      "se_difference": 0.05046662596352544,
+      "minimum_detectable_difference": 0.14138654230002343,
+      "observed_difference": -0.013605442176870763,
+      "oracle_gap": 0.04761904761904767,
+      "oracle_ci95": [
+        -0.12921465355805242,
+        0.22939184471442536
+      ],
+      "events_needed_at_difference": {
+        "0.02": 1200,
+        "0.03": 534,
+        "0.05": 192,
+        "0.10": 48
+      }
+    },
+    {
+      "scope": "pooled",
+      "se_difference": 0.03066167998880635,
+      "minimum_detectable_difference": 0.08590130273144005,
+      "observed_difference": -0.0099938499384995,
+      "oracle_gap": 0.0264452644526445,
+      "oracle_ci95": [
+        -0.10675357374918781,
+        0.1505386137062499
+      ],
+      "events_needed_at_difference": {
+        "0.02": 443,
+        "0.03": 197,
+        "0.05": 71,
+        "0.10": 18
+      }
+    },
+    {
+      "scope": "pooled_fold_ranks",
+      "se_difference": 0.037453216071670375,
+      "minimum_detectable_difference": 0.10492836834815066,
+      "observed_difference": -0.008533210332103303,
+      "oracle_gap": 0.04981549815498165,
+      "oracle_ci95": [
+        -0.08974964985994399,
+        0.18270137600494735
+      ],
+      "events_needed_at_difference": {
+        "0.02": 661,
+        "0.03": 294,
+        "0.05": 106,
+        "0.10": 27
+      }
+    }
+  ],
+  "nested_cox": [
+    {
+      "feature": "conditional",
+      "added": "ligature_q",
+      "given": "direct+stage",
+      "log_hr_per_fold_sd": 0.0669339380897432,
+      "lr": 0.0334644118217966,
+      "p": 0.854850741080593,
+      "p_holm": 1.0
+    },
+    {
+      "feature": "conditional",
+      "added": "direct",
+      "given": "ligature_q+stage",
+      "log_hr_per_fold_sd": -0.13435580699880859,
+      "lr": 0.1527834483863728,
+      "p": 0.6958894611347846,
+      "p_holm": 1.0
+    },
+    {
+      "feature": "conditional",
+      "added": "measured",
+      "given": "direct+stage",
+      "log_hr_per_fold_sd": 0.04532141003402462,
+      "lr": 0.026751753920706278,
+      "p": 0.870077823962689,
+      "p_holm": 1.0
+    },
+    {
+      "feature": "abundance",
+      "added": "ligature_q",
+      "given": "direct+stage",
+      "log_hr_per_fold_sd": 0.220862955593048,
+      "lr": 0.33688782592560074,
+      "p": 0.5616311600709044,
+      "p_holm": 1.0
+    },
+    {
+      "feature": "abundance",
+      "added": "direct",
+      "given": "ligature_q+stage",
+      "log_hr_per_fold_sd": -0.3750407571291041,
+      "lr": 0.8790398847649783,
+      "p": 0.34846478209943377,
+      "p_holm": 1.0
+    },
+    {
+      "feature": "abundance",
+      "added": "measured",
+      "given": "direct+stage",
+      "log_hr_per_fold_sd": -0.000584932607007514,
+      "lr": 3.2819533544170554e-06,
+      "p": 0.9985545401729248,
+      "p_holm": 1.0
+    },
+    {
+      "feature": "engaged_burden",
+      "added": "ligature_q",
+      "given": "direct+stage",
+      "log_hr_per_fold_sd": 0.13848611703762703,
+      "lr": 0.09389206300193109,
+      "p": 0.7592863152641828,
+      "p_holm": 1.0
+    },
+    {
+      "feature": "engaged_burden",
+      "added": "direct",
+      "given": "ligature_q+stage",
+      "log_hr_per_fold_sd": -0.21641728620519604,
+      "lr": 0.2793645634359905,
+      "p": 0.597118007063983,
+      "p_holm": 1.0
+    },
+    {
+      "feature": "engaged_burden",
+      "added": "measured",
+      "given": "direct+stage",
+      "log_hr_per_fold_sd": 0.054942349517081816,
+      "lr": 0.03864570733597361,
+      "p": 0.8441522200264256,
+      "p_holm": 1.0
+    }
+  ],
+  "assay_recovery": [
+    {
+      "feature": "conditional",
+      "mse_ratio": 0.7401183312079893,
+      "mse_ratio_ci95": [
+        0.5589211424415015,
+        0.9161523692915512
+      ],
+      "spearman_difference": 0.10515947467166992,
+      "spearman_difference_ci95": [
+        -0.02648347157951732,
+        0.2626053751765134
+      ]
+    },
+    {
+      "feature": "abundance",
+      "mse_ratio": 0.8177255639840142,
+      "mse_ratio_ci95": [
+        0.6480315246548397,
+        1.0918960269806282
+      ],
+      "spearman_difference": -0.005440900562851625,
+      "spearman_difference_ci95": [
+        -0.1418557942811895,
+        0.12453815743617742
+      ]
+    },
+    {
+      "feature": "engaged_burden",
+      "mse_ratio": 0.9101029933741503,
+      "mse_ratio_ci95": [
+        0.7269478542293145,
+        1.2166690358688839
+      ],
+      "spearman_difference": 0.12665728580362728,
+      "spearman_difference_ci95": [
+        0.007176515612536111,
+        0.2558014584633985
+      ]
+    }
+  ],
+  "til": {
+    "n": 39,
+    "levels": {
+      "Absent": 11,
+      "Mild": 15,
+      "Moderate": 9,
+      "Marked": 4
+    },
+    "rows": [
+      {
+        "feature": "conditional",
+        "scope": "within_fold",
+        "method": "measured",
+        "concordance": 0.5145631067961165,
+        "ci95": [
+          0.33749623493975905,
+          0.691358024691358
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "conditional",
+        "scope": "within_fold",
+        "method": "stain_q",
+        "concordance": 0.558252427184466,
+        "ci95": [
+          0.3928248709122203,
+          0.7126436781609196
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "conditional",
+        "scope": "within_fold",
+        "method": "ligature",
+        "concordance": 0.5364077669902912,
+        "ci95": [
+          0.35879189466484274,
+          0.7109581801470587
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "conditional",
+        "scope": "within_fold",
+        "method": "ligature_q",
+        "concordance": 0.5703883495145631,
+        "ci95": [
+          0.39473287888395686,
+          0.7327635188087774
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "conditional",
+        "scope": "within_fold",
+        "method": "direct",
+        "concordance": 0.5631067961165048,
+        "ci95": [
+          0.39146382428940574,
+          0.7153666469544646
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "conditional",
+        "scope": "pooled",
+        "method": "measured",
+        "concordance": 0.5565862708719852,
+        "ci95": [
+          0.41253060289411053,
+          0.7024836432506887
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "conditional",
+        "scope": "pooled",
+        "method": "stain_q",
+        "concordance": 0.577922077922078,
+        "ci95": [
+          0.45381889763779526,
+          0.7013255058213711
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "conditional",
+        "scope": "pooled",
+        "method": "ligature",
+        "concordance": 0.5640074211502782,
+        "ci95": [
+          0.41809646370109377,
+          0.703566832635782
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "conditional",
+        "scope": "pooled",
+        "method": "ligature_q",
+        "concordance": 0.5876623376623376,
+        "ci95": [
+          0.44684454191033135,
+          0.7161240463036043
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "conditional",
+        "scope": "pooled",
+        "method": "direct",
+        "concordance": 0.5732838589981447,
+        "ci95": [
+          0.441732215774769,
+          0.6975572901709264
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "abundance",
+        "scope": "within_fold",
+        "method": "measured",
+        "concordance": 0.6310679611650486,
+        "ci95": [
+          0.48748355263157894,
+          0.7669936161723633
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "abundance",
+        "scope": "within_fold",
+        "method": "stain_q",
+        "concordance": 0.6407766990291263,
+        "ci95": [
+          0.47776515151515153,
+          0.7917025862068964
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "abundance",
+        "scope": "within_fold",
+        "method": "ligature",
+        "concordance": 0.6116504854368932,
+        "ci95": [
+          0.4511206896551724,
+          0.7631613941769316
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "abundance",
+        "scope": "within_fold",
+        "method": "ligature_q",
+        "concordance": 0.5849514563106796,
+        "ci95": [
+          0.4257890365448505,
+          0.7275055693069307
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "abundance",
+        "scope": "within_fold",
+        "method": "direct",
+        "concordance": 0.6634304207119741,
+        "ci95": [
+          0.49180721328489885,
+          0.8191758307434853
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "abundance",
+        "scope": "pooled",
+        "method": "measured",
+        "concordance": 0.6623376623376623,
+        "ci95": [
+          0.526715601927168,
+          0.7864056045648672
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "abundance",
+        "scope": "pooled",
+        "method": "stain_q",
+        "concordance": 0.6586270871985158,
+        "ci95": [
+          0.5328121951219512,
+          0.7757809366666432
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "abundance",
+        "scope": "pooled",
+        "method": "ligature",
+        "concordance": 0.6716141001855288,
+        "ci95": [
+          0.545716713867737,
+          0.7821107336666238
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "abundance",
+        "scope": "pooled",
+        "method": "ligature_q",
+        "concordance": 0.6238404452690167,
+        "ci95": [
+          0.5024176349865981,
+          0.7442647219147295
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "abundance",
+        "scope": "pooled",
+        "method": "direct",
+        "concordance": 0.6982065553494126,
+        "ci95": [
+          0.5788032342885597,
+          0.8053897924267721
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "within_fold",
+        "method": "measured",
+        "concordance": 0.6601941747572816,
+        "ci95": [
+          0.49985632183908046,
+          0.8265463592844544
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "within_fold",
+        "method": "stain_q",
+        "concordance": 0.6456310679611651,
+        "ci95": [
+          0.48862975687103594,
+          0.7802197802197802
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "within_fold",
+        "method": "ligature",
+        "concordance": 0.6237864077669903,
+        "ci95": [
+          0.4558420014347202,
+          0.771290797355918
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "within_fold",
+        "method": "ligature_q",
+        "concordance": 0.6601941747572816,
+        "ci95": [
+          0.4862560192616373,
+          0.8000132978723404
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "within_fold",
+        "method": "direct",
+        "concordance": 0.6666666666666666,
+        "ci95": [
+          0.5087378167641325,
+          0.7949312714776631
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "pooled",
+        "method": "measured",
+        "concordance": 0.6530612244897959,
+        "ci95": [
+          0.5088612185686654,
+          0.7917960832007981
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "pooled",
+        "method": "stain_q",
+        "concordance": 0.6187384044526901,
+        "ci95": [
+          0.5064882603931078,
+          0.7307304486997996
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "pooled",
+        "method": "ligature",
+        "concordance": 0.6233766233766234,
+        "ci95": [
+          0.47670575095057033,
+          0.746627956081081
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "pooled",
+        "method": "ligature_q",
+        "concordance": 0.6326530612244898,
+        "ci95": [
+          0.5208683466213031,
+          0.7390522338148743
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "pooled",
+        "method": "direct",
+        "concordance": 0.6555349412492268,
+        "ci95": [
+          0.5489138925313368,
+          0.7544569567303016
+        ],
+        "comparable_pairs": 539
+      }
+    ],
+    "contrasts": [
+      {
+        "feature": "conditional",
+        "scope": "within_fold",
+        "contrast": "ligature_q minus direct",
+        "a": 0.5703883495145631,
+        "b": 0.5631067961165048,
+        "difference": 0.007281553398058249,
+        "se": 0.0542188041940228,
+        "ci95": [
+          -0.09664598108747051,
+          0.11605410704457883
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "conditional",
+        "scope": "within_fold",
+        "contrast": "measured minus direct",
+        "a": 0.5145631067961165,
+        "b": 0.5631067961165048,
+        "difference": -0.04854368932038833,
+        "se": 0.09450380636905195,
+        "ci95": [
+          -0.22105352667382744,
+          0.13926826560071046
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "conditional",
+        "scope": "within_fold",
+        "contrast": "ligature_q minus stain_q",
+        "a": 0.5703883495145631,
+        "b": 0.558252427184466,
+        "difference": 0.012135922330097082,
+        "se": 0.0601895853473677,
+        "ci95": [
+          -0.10417729591836732,
+          0.1350594128611369
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "conditional",
+        "scope": "pooled",
+        "contrast": "ligature_q minus direct",
+        "a": 0.5876623376623376,
+        "b": 0.5732838589981447,
+        "difference": 0.01437847866419284,
+        "se": 0.04475896460787536,
+        "ci95": [
+          -0.07517655423280423,
+          0.10164745406750478
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "conditional",
+        "scope": "pooled",
+        "contrast": "measured minus direct",
+        "a": 0.5565862708719852,
+        "b": 0.5732838589981447,
+        "difference": -0.016697588126159513,
+        "se": 0.07573896616521851,
+        "ci95": [
+          -0.16756230017956475,
+          0.1319041101571897
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "conditional",
+        "scope": "pooled",
+        "contrast": "ligature_q minus stain_q",
+        "a": 0.5876623376623376,
+        "b": 0.577922077922078,
+        "difference": 0.009740259740259605,
+        "se": 0.04912779846354062,
+        "ci95": [
+          -0.08579892639972678,
+          0.10727452491011814
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "abundance",
+        "scope": "within_fold",
+        "contrast": "ligature_q minus direct",
+        "a": 0.5849514563106796,
+        "b": 0.6634304207119741,
+        "difference": -0.07847896440129454,
+        "se": 0.05674913015930785,
+        "ci95": [
+          -0.1897414454924324,
+          0.029362899831649743
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "abundance",
+        "scope": "within_fold",
+        "contrast": "measured minus direct",
+        "a": 0.6310679611650486,
+        "b": 0.6634304207119741,
+        "difference": -0.032362459546925515,
+        "se": 0.09412376541138744,
+        "ci95": [
+          -0.21376811594202905,
+          0.1489762068176617
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "abundance",
+        "scope": "within_fold",
+        "contrast": "ligature_q minus stain_q",
+        "a": 0.5849514563106796,
+        "b": 0.6407766990291263,
+        "difference": -0.05582524271844669,
+        "se": 0.04038760616623873,
+        "ci95": [
+          -0.15323038856304982,
+          0.008064516129032143
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "abundance",
+        "scope": "pooled",
+        "contrast": "ligature_q minus direct",
+        "a": 0.6238404452690167,
+        "b": 0.6982065553494126,
+        "difference": -0.07436611008039584,
+        "se": 0.03546183188118752,
+        "ci95": [
+          -0.1413551739067687,
+          -0.0035297397524216853
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "abundance",
+        "scope": "pooled",
+        "contrast": "measured minus direct",
+        "a": 0.6623376623376623,
+        "b": 0.6982065553494126,
+        "difference": -0.035868893011750225,
+        "se": 0.0673032762253394,
+        "ci95": [
+          -0.16303837687675482,
+          0.10032378480566506
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "abundance",
+        "scope": "pooled",
+        "contrast": "ligature_q minus stain_q",
+        "a": 0.6238404452690167,
+        "b": 0.6586270871985158,
+        "difference": -0.034786641929499096,
+        "se": 0.021082116540559484,
+        "ci95": [
+          -0.07576116957046752,
+          0.007693886861313944
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "within_fold",
+        "contrast": "ligature_q minus direct",
+        "a": 0.6601941747572816,
+        "b": 0.6666666666666666,
+        "difference": -0.006472491909385036,
+        "se": 0.04741400619028237,
+        "ci95": [
+          -0.10000420875420873,
+          0.0894460798056255
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "within_fold",
+        "contrast": "measured minus direct",
+        "a": 0.6601941747572816,
+        "b": 0.6666666666666666,
+        "difference": -0.006472491909385036,
+        "se": 0.10290469940304929,
+        "ci95": [
+          -0.1963011695906434,
+          0.19929347826086946
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "within_fold",
+        "contrast": "ligature_q minus stain_q",
+        "a": 0.6601941747572816,
+        "b": 0.6456310679611651,
+        "difference": 0.014563106796116498,
+        "se": 0.05904485439138789,
+        "ci95": [
+          -0.1017468776916452,
+          0.12503094059405925
+        ],
+        "comparable_pairs": 103
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "pooled",
+        "contrast": "ligature_q minus direct",
+        "a": 0.6326530612244898,
+        "b": 0.6555349412492268,
+        "difference": -0.02288188002473701,
+        "se": 0.031844435821151026,
+        "ci95": [
+          -0.09160502529471824,
+          0.034083858238603874
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "pooled",
+        "contrast": "measured minus direct",
+        "a": 0.6530612244897959,
+        "b": 0.6555349412492268,
+        "difference": -0.0024737167594309772,
+        "se": 0.08406499058443312,
+        "ci95": [
+          -0.17547947592958854,
+          0.16344920598171225
+        ],
+        "comparable_pairs": 539
+      },
+      {
+        "feature": "engaged_burden",
+        "scope": "pooled",
+        "contrast": "ligature_q minus stain_q",
+        "a": 0.6326530612244898,
+        "b": 0.6187384044526901,
+        "difference": 0.013914656771799705,
+        "se": 0.03854951155893185,
+        "ci95": [
+          -0.06835665518236594,
+          0.08138391468429637
+        ],
+        "comparable_pairs": 539
+      }
+    ]
+  },
+  "decision": {
+    "primary": {
+      "method": "ligature_q",
+      "feature": "engaged_burden",
+      "scope": "within_fold",
+      "aggregate": "mean_of_metrics",
+      "a": 0.5510204081632653,
+      "b": 0.564625850340136,
+      "difference": -0.013605442176870763,
+      "se": 0.05046662596352544,
+      "ci95": [
+        -0.1131293029259897,
+        0.08982040229885058
+      ],
+      "comparable_pairs": 98,
+      "ci95_familywise": [
+        -0.18449009640862626,
+        0.15727921205488474
+      ]
+    },
+    "measured_concordance": 0.6122448979591837,
+    "measured_ci95": [
+      0.4415084915084915,
+      0.7777777777777778
+    ],
+    "gates": {
+      "measured_excludes_half": false,
+      "ligature_beats_direct_familywise": false
+    },
+    "survival_superiority_established": false
+  },
+  "script_sha256": "3543743936d56e23cc5934fb67d38c59ada61c28df2d474e2a8873670ba7378b",
+  "clinical_source_sha256": "dcf244f0d5a779ac33f11de7b6f93bc544e655a51a8057bb6decda9019d673d3"
+}

@@ -1,6 +1,6 @@
 <div align="center">
 
-# Generative Inference of Spatial Molecular Organization from Histology
+# LIGATURE: Generative Inference of Spatial Molecular Organization from Histology
 
 **LIGATURE · Joint molecular sampling for spatial tissue analysis**
 
